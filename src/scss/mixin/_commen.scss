@@ -1,0 +1,44 @@
+/**
+* Theme Color
+*****************************/
+
+@mixin back-ground-dark {
+  background-color: $black-color;
+  color: $white-color;
+}
+
+@mixin back-ground-white {
+  color: $black-color;
+  background-color: $white-color;
+}
+
+/**
+* Border Radius
+********************************/
+@mixin border-radius($radius: 5px) {
+  -webkit-border-radius: #{$radius};
+  -moz-border-radius: #{$radius};
+  -ms-border-radius: #{$radius};
+  -o-border-radius: #{$radius};
+  border-radius: #{$radius};
+}
+
+/**
+* Fit Size
+*******************************/
+@mixin fit() {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+
+/**
+* Text And Paragraph
+*********************************/
+@mixin text-setter($font-size: 14px, $line-height: 28px) {
+  font-size: $font-size;
+  line-height: $line-height;
+}

@@ -1,0 +1,35 @@
+/**
+* Black And White
+**********************************/
+$black-color: #252a34;
+$white-color: rgb(250, 250, 250);
+
+
+/**
+* Color Palette
+**********************************/
+
+//primary-color series
+$primary-color: #08d9d6;
+$primary-color-light-1: lighten($primary-color, 33.333%);
+$primary-color-light-2: lighten($primary-color, 66.666%);
+$primary-color-darken-1: darken($primary-color, 33.333%);
+$primary-color-darken-2: darken($primary-color, 66.666%);
+
+//secondary-color series
+$secondary-color: #ff2e63;
+$secondary-color-light-1: lighten($secondary-color, 33.333%);
+$secondary-color-light-2: lighten($secondary-color, 66.666%);
+$secondary-color-darken-1: darken($secondary-color, 33.333%);
+$secondary-color-darken-2: darken($secondary-color, 66.6666%);
+
+
+/**
+* Optional Color
+************************************/
+
+
+/**
+* Color Gray
+**********************************/
+$gray-color: rgb(235, 235, 235);

@@ -1,0 +1,35 @@
+#main {
+  width: 100%;
+  overflow: hidden;
+}
+
+// layout block 
+
+.layout {
+  padding: 0  $container-x-padding;
+  margin: $container-y-margin auto;
+
+  @media #{$breakpoint-down-xl} {
+    width: $breakpoint-xl;
+  }
+
+  @media #{$breakpoint-down-lg} {
+    width: $breakpoint-lg;
+  }
+
+  @media #{$breakpoint-down-md} {
+    width: $breakpoint-md;
+  }
+
+  @media #{$breakpoint-down-sm} {
+    width: $breakpoint-sm;
+  }
+
+  @media #{$breakpoint-down-xs} {
+    width: $breakpoint-xs;
+  }
+
+  @media #{$breakpoint-down-xxs} {
+    width: $breakpoint-xxs;
+  }
+}

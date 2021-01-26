@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: IRANYekan,
+    'Segoe UI',
+    tahoma,
+    Verdana,
+    Arial,
+    sans-serif !important;
+  outline: none;
+}
+
+body {
+  direction: rtl;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  font-size: 0.875em;
+  font-weight: 400;
+}

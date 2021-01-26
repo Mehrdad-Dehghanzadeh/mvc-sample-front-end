@@ -25,8 +25,6 @@ coverage
 # nyc test coverage
 .nyc_output
 
-# Grunt intermediate storage (https://gruntjs.com/creating-plugins#storing-task-files)
-.grunt
 
 # Bower dependency directory (https://bower.io/)
 bower_components
@@ -75,11 +73,7 @@ typings/
 # parcel-bundler cache (https://parceljs.org/)
 .cache
 
-# Next.js build output
-.next
-
-# Nuxt.js build / generate output
-.nuxt
+# generate output
 dist
 
 # Gatsby files
@@ -88,8 +82,7 @@ dist
 # https://nextjs.org/blog/next-9-1#public-directory-support
 # public
 
-# vuepress build output
-.vuepress/dist
+
 
 # Serverless directories
 .serverless/
@@ -102,3 +95,7 @@ dist
 
 # TernJS port file
 .tern-port
+
+#editors 
+.idea
+.vscode
