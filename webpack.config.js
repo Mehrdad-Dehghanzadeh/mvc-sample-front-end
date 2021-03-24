@@ -13,7 +13,7 @@ const {
 
 // get all html file in __Dir 
 const html = {
-    __Dir: path.resolve(__dirname, "src/Views/"),
+    __Dir: path.resolve(__dirname, "src/views/"),
 
     entry: [],
 
@@ -24,7 +24,7 @@ const html = {
                 template: path.resolve(this.__Dir, name),
                 minify: false,
                 inject: false,
-                hash: true,
+                scriptLoading: 'blocking'
             }))
         }
     },
@@ -50,11 +50,13 @@ const html = {
 
 
 html.readDir()
-// Webpack Config
 
+// Webpack Config
 let config = {
     // source directories
     context: path.resolve(__dirname, 'src'),
+
+    target: ['web', 'browserslist'],
 
     // webpack resolve modules
     resolve: {
@@ -72,8 +74,12 @@ let config = {
             './scss/main.scss',
 
             // import library js
-            './script/helper.js',
-            './script/main.js'
+            'jquery-validation/dist/jquery.validate.js',
+
+            // import scripts
+            'helper.js',
+            'main.js',
+
         ]
     },
 
@@ -88,8 +94,10 @@ let config = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'scripts/[name].js',
-        libraryTarget: 'var',
-        library: '[name]'
+        library: {
+            name: '[name]',
+            type: 'var',
+        }
     },
 
 
@@ -110,44 +118,59 @@ let config = {
             clear: false
         }),
 
-        new copyWebpackPlugin({
-            patterns: [{
-                from: path.resolve(__dirname, 'src/images'),
-                to: './images'
-            }, ]
-        }),
+
+        // new copyWebpackPlugin({
+        //     patterns: [{
+        //         from: path.resolve(__dirname, 'src/images'),
+        //         to: './images'
+        //     }, ]
+        // }),
 
         //add html page
         ...html.entry
     ],
 
     module: {
-        rules: [{
+        rules: [
+            {
                 test: /\.(eot|svg|ttf|woff)$/i,
                 loader: 'file-loader',
                 options: {
-                    name: '[name].[ext]',
+                    name: '[name]/[name].[ext]',
                     outputPath: 'fonts'
                 }
 
             },
             {
-                test: require.resolve('jquery'),
-                use: [{
-                    loader: 'expose-loader',
+                test: /\.m?js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: "babel-loader",
                     options: {
-                        exposes: ['$', 'jQuery']
+                        presets: ['@babel/preset-env']
                     }
-                }, ]
+                }
+            },
+            {
+                test: require.resolve('jquery'),
+                use: [
+                    {
+                        loader: 'expose-loader',
+                        options: {
+                            exposes: ['$', 'jQuery']
+                        }
+                    },]
             },
             {
                 test: /\.script\.js$/,
-                use: [{
-                    loader: 'script-loader',
-                    options: {
-                        sourceMap: true,
+                use: [
+                    {
+                        loader: 'script-loader',
+                        options: {
+                            sourceMap: true,
+                        },
                     },
-                }, ]
+                ]
             }
         ]
     },
@@ -185,9 +208,10 @@ module.exports = (env, {
 
         //config dev server for development mode
         config.devServer = {
-            contentBase: __dirname + "/dist/",
-            port: 8080,
+            contentBase: path.resolve(__dirname, "dist"),
+            port: 9090,
             open: true,
+            hot: true,
             index: "index.html",
             watchContentBase: true
         }

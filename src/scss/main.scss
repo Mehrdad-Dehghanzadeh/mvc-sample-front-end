@@ -1,7 +1,6 @@
 /**
  * Variables import
 ***********************************/
-
 @import 'variable/color.scss';
 @import 'variable/around';
 @import 'variable/breakingPoint';
@@ -12,8 +11,6 @@
 ***********************************/
 @import 'mixin/display';
 @import 'mixin/commen';
-
-
 
 
 /**
@@ -40,4 +37,4 @@
 * Pages
 ***********************************/
 @import 'pages/index';
-@import 'pages/panel'
+@import 'pages/panel';
