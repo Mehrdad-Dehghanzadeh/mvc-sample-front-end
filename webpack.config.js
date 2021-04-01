@@ -74,6 +74,7 @@ let config = {
             './scss/main.scss',
 
             // import library js
+            'Select2/select2.js',
             'jquery-validation/dist/jquery.validate.js',
 
             // import scripts
@@ -119,12 +120,11 @@ let config = {
         }),
 
 
-        // new copyWebpackPlugin({
-        //     patterns: [{
-        //         from: path.resolve(__dirname, 'src/images'),
-        //         to: './images'
-        //     }, ]
-        // }),
+        new copyWebpackPlugin({
+            patterns: [{
+                from: 'static/**/*',
+            },]
+        }),
 
         //add html page
         ...html.entry
@@ -199,10 +199,12 @@ module.exports = (env, {
 
         // config loaders for development mode
         config.module.rules.push(
-            ...[{
-                test: /\.(c|sa|sc)ss$/i,
-                use: ["style-loader", "css-loader", "sass-loader"],
-            }, ]
+            ...[
+                {
+                    test: /\.(c|sa|sc)ss$/i,
+                    use: ["style-loader", "css-loader", "sass-loader"],
+                },
+            ]
         );
 
 
