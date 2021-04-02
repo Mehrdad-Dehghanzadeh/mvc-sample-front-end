@@ -1,64 +1,68 @@
 /**
-* Breack Point
+* Break Point
 ******************************************/
-$breakpoint-xxl: 1600px;
-$breakpoint-xl: 1400px;
-$breakpoint-lg: 1200px;
-$breakpoint-md: 992px;
-$breakpoint-sm: 768px;
-$breakpoint-xs: 576px;
-$breakpoint-xxs: 380px;
-
-
+$breakpoint-xxl: 1400px;
+$breakpoint-xl: 1200px;
+$breakpoint-lg: 992px;
+$breakpoint-md: 768px;
+$breakpoint-sm: 576px;
+$breakpoint-xs: 380px;
 
 
 /**
-* Breack Point media queries for up
+* Container Max Width
+ ****************************************/
+$container-max-widths: (
+  xxl: 1320px,
+  xl: 1140px,
+  lg: 960px,
+  md: 720px,
+  sm: 540px,
+  xs: auto
+);
+
+
+/**
+* Break Point media queries for up
 ******************************************/
 
-// Super Small devices (landscape phones, 380px and up)
-$breakpoint-up-xxs: 'screan and (min-width: #{$breakpoint-xxs + 1})';
+// Super Small devices ( phones, 380px and up)
+$breakpoint-up-xs: 'only screen and (min-width: #{$breakpoint-xs + 1})';
 
-// Small devices (landscape phones, 576px and up)
-$breakpoint-up-xs: 'screan and (min-width: #{$breakpoint-xs + 1})';
+//  Small devices (landscape phones, 576px and up)
+$breakpoint-up-sm: 'only screen and (min-width: #{$breakpoint-sm + 1})';
 
 // Medium devices (tablets, 768px and up)
-$breakpoint-up-sm: 'screan and (min-width: #{$breakpoint-sm + 1})';
+$breakpoint-up-md: 'only screen and (min-width: #{$breakpoint-md + 1})';
 
 // Large devices (desktops, 992px and up)
-$breakpoint-up-md: 'screan and (min-width: #{$breakpoint-md + 1})';
+$breakpoint-up-lg: 'only screen and (min-width: #{$breakpoint-lg + 1})';
 
-// Extra large devices (large desktops, 1200px and up)
-$breakpoint-up-lg: 'screan and (min-width: #{$breakpoint-lg + 1})';
-
-// Ultra Extra large devices (large desktops, 1600px and up)
-$breakpoint-up-xl: 'screan and (min-width: #{$breakpoint-xl + 1})';
-$breakpoint-up-xxl: 'screan and (min-width: #{$breakpoint-xxl + 1})';
+// Ultra Extra large devices (large desktops, 1200px and up)
+$breakpoint-up-xl: 'only screen and (min-width: #{$breakpoint-xl + 1})';
+$breakpoint-up-xxl: 'only screen and (min-width: #{$breakpoint-xxl + 1})';
 
 
 
 
 /**
-* breack point media queries for down
+* Break point media queries for down
 ******************************************/
 
 // Super Small devices (landscape phones, 380px and up)
-$breakpoint-down-xxs: 'screan and (max-width: #{$breakpoint-xxs - 1})';
+$breakpoint-down-xs: 'only screen and (max-width: #{$breakpoint-xs - 1})';
 
 // Small devices (landscape phones, 576px and down)
-$breakpoint-down-xs: 'screan and (max-width: #{$breakpoint-xs - 1})';
+$breakpoint-down-sm: 'only screen and (max-width: #{$breakpoint-sm - 1})';
 
-// Medium devices (tablets, 768px and down)
-$breakpoint-down-sm: 'screan and (max-width: #{$breakpoint-sm - 1})';
+// Large devices (desktops, 768px and down)
+$breakpoint-down-md: 'only screen and (max-width: #{$breakpoint-md - 1})';
 
-// Large devices (desktops, 992px and down)
-$breakpoint-down-md: 'screan and (max-width: #{$breakpoint-md - 1})';
+// Extra large devices (large desktops, 992px and down)
+$breakpoint-down-lg: 'only screen and (max-width: #{$breakpoint-lg - 1})';
 
-// Extra large devices (large desktops, 1200px and down)
-$breakpoint-down-lg: 'screan and (max-width: #{$breakpoint-lg - 1})';
+// Super Extra large devices (large desktops, 1200px and down)
+$breakpoint-down-xl: 'only screen and (max-width: #{$breakpoint-xl - 1})';
 
-// Super Extra large devices (large desktops, 1600px and down)
-$breakpoint-down-xl: 'screan and (max-width: #{$breakpoint-xl - 1})';
-
-// Ultra Extra large devices (large desktops, 1600px and down)
-$breakpoint-down-xxl: 'screan and (max-width: #{$breakpoint-xxl - 1})';
+// Ultra Extra large devices (large desktops, 1400px and down)
+$breakpoint-down-xxl: 'only screen and (max-width: #{$breakpoint-xxl - 1})';

@@ -7,7 +7,12 @@ module.exports = {
         purgecss({
             safelist: {
                 standard: [
-                    /--active$/
+                    /active$/,
+                    /actived$/,
+                    /disabled$/,
+                    /disabled$/,
+                    'row',
+                    /^col/,
                 ],
                 deep: [],
                 greedy: [],

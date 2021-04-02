@@ -1,0 +1,72 @@
+/**
+* Heading
+ ************************************/
+.heading-1 {
+  @include text-size(72px, 1.5em, Light);
+}
+
+.heading-2 {
+  @include text-size(60px, 1.5em, Light);
+}
+
+.heading-3 {
+  @include text-size(48px, 1.5em, Regular);
+}
+
+.heading-4 {
+  @include text-size(34px, 1.5em, Regular);
+}
+
+.heading-5 {
+  @include text-size(24px, 2em, Regular);
+}
+
+.heading-6 {
+  @include text-size(20px, 2em, Medium);
+}
+
+/**
+* Subtitle
+ ***********************************/
+.subtitle-1 {
+  @include text-size(16px, 2em, Regular);
+}
+
+.subtitle-2 {
+  @include text-size(14px, 2em, Medium);
+}
+
+
+/**
+* Body or Text
+ ***********************************/
+.body-1 {
+  @include text-size(16px, 2em, Regular);
+}
+
+.body-2 {
+  @include text-size(14px, 2em, Regular);
+}
+
+.caption {
+  @include text-size(12px, 2em, Regular);
+}
+
+.overline {
+  @include text-size(10px, 2em, Regular);
+}
+
+/**
+* common text class
+ ********************************/
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}

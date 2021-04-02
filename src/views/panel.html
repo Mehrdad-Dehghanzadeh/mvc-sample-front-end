@@ -4,11 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="stylesheet" herf="css/main.min.css" />
+  <%= htmlWebpackPlugin.tags.headTags %>
 </head>
 
 <body>
+
 <!-- Header -->
 
 <header class="header" id="header">
@@ -20,7 +20,7 @@
 <!-- Main -->
 
 <main id="main">
-  
+
   <div class="layout">
 
   </div>
@@ -38,19 +38,18 @@
 <!-- End Footer -->
 
 
+<!-- Scripts -->
+<%= htmlWebpackPlugin.tags.bodyTags %>
 
+<script type="text/javascript">
+  $(function () {
 
-  <!-- Scripts -->
+  });
 
-  <script src="scripts/bundle.js"></script>
-  <script type="text/javascript">
-    $(function () {
+</script>
 
+<!-- END Scripts -->
 
-    });
-  </script>
-
-  <!-- END Scripts -->
 </body>
 
 </html>

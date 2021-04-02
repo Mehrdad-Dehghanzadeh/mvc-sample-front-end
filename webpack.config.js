@@ -122,7 +122,7 @@ let config = {
 
         new copyWebpackPlugin({
             patterns: [{
-                from: 'static/**/*',
+                from: 'static',
             },]
         }),
 

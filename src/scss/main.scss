@@ -1,7 +1,7 @@
 /**
  * Variables import
 ***********************************/
-@import 'variable/color.scss';
+@import 'variable/color';
 @import 'variable/around';
 @import 'variable/breakingPoint';
 
@@ -11,6 +11,7 @@
 ***********************************/
 @import 'mixin/display';
 @import 'mixin/commen';
+@import 'mixin/text';
 
 
 /**
@@ -19,19 +20,22 @@
 @import 'base/reset';
 @import 'base/base';
 @import 'base/fonts';
+@import 'base/typography';
+@import 'mixin/spacing';
 
 
 /**
 * Components
 ************************************/
-@import 'components/grid';
+
 
 /**
 * Layout 
 ***********************************/
 @import 'layout/header';
-@import 'layout/mainLayout';
+@import 'layout/main';
 @import 'layout/footer';
+@import 'layout/grid';
 
 /**
 * Pages

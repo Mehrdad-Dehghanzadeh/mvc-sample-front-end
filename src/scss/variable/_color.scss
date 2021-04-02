@@ -1,8 +1,8 @@
 /**
 * Black And White
 **********************************/
-$black-color: #252a34;
-$white-color: rgb(250, 250, 250);
+$color-black: #252a34;
+$color-white: rgb(250, 250, 250);
 
 
 /**
@@ -10,18 +10,18 @@ $white-color: rgb(250, 250, 250);
 **********************************/
 
 //primary-color series
-$primary-color: #08d9d6;
-$primary-color-light-1: lighten($primary-color, 33.333%);
-$primary-color-light-2: lighten($primary-color, 66.666%);
-$primary-color-darken-1: darken($primary-color, 33.333%);
-$primary-color-darken-2: darken($primary-color, 66.666%);
+$color-primary: #21217c;
+$color-primary-light-1: #2f2faf;
+$color-primary-light-2: #3535c8;
+$color-primary-darken-1: #14144a;
+$color-primary-darken-2: #0d0d31;
 
 //secondary-color series
-$secondary-color: #ff2e63;
-$secondary-color-light-1: lighten($secondary-color, 33.333%);
-$secondary-color-light-2: lighten($secondary-color, 66.666%);
-$secondary-color-darken-1: darken($secondary-color, 33.333%);
-$secondary-color-darken-2: darken($secondary-color, 66.6666%);
+$color-secondary: #47e644;
+$color-secondary-light-1: #21dc1e;
+$color-secondary-light-2: #5be858;
+$color-secondary-darken-1: #137b11;
+$color-secondary-darken-2: #0a4309;
 
 
 /**
@@ -32,4 +32,4 @@ $secondary-color-darken-2: darken($secondary-color, 66.6666%);
 /**
 * Color Gray
 **********************************/
-$gray-color: rgb(235, 235, 235);
+$color-gray: rgb(235, 235, 235);

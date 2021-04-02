@@ -1,0 +1,8 @@
+/**
+* Text And Paragraph
+*********************************/
+@mixin text-size($font-size: 14px, $line-height: 2em, $font-weight: Normal) {
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $font-weight;
+}
