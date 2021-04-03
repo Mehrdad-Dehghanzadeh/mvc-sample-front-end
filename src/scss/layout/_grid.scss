@@ -2,6 +2,10 @@
 * Grid system
 ****************************************/
 
+
+/**
+* Row (row)
+****************************************/
 .row {
   @include flex-row();
   flex-wrap: wrap;
@@ -14,6 +18,10 @@
   position: relative;
 }
 
+
+/**
+* Column (col)
+**************************************/
 %initial-col {
   position: relative;
   width: 100%;
@@ -30,9 +38,6 @@
   flex-grow: 1;
 }
 
-/**
-* Column (col)
-**************************************/
 // Make col-i class 
 @for $i from 1 through 12 {
   .col-#{$i} {
@@ -196,7 +201,17 @@
 
   @media #{$breakpoint-up-xs} {
     flex: 0 0 auto;
-    max-width: auto;
     width: auto;
+  }
+}
+
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+
+  > .col,
+  > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
   }
 }

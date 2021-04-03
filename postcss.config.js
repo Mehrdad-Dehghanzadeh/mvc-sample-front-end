@@ -9,8 +9,11 @@ module.exports = {
                 standard: [
                     /active$/,
                     /actived$/,
+                    /enable$/,
+                    /enabled$/,
                     /disabled$/,
                     /disabled$/,
+                    /hidden$/,
                     'row',
                     /^col/,
                 ],
