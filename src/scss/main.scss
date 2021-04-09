@@ -9,9 +9,12 @@
 /**
 * Mixin
 ***********************************/
-@import 'mixin/display';
-@import 'mixin/commen';
+@import 'mixin/layout';
+@import 'mixin/common';
 @import 'mixin/text';
+@import 'mixin/spacing';
+
+
 
 
 /**
@@ -23,20 +26,22 @@
 @import 'base/typography';
 @import 'mixin/spacing';
 
+/**
+* Layout 
+***********************************/
+@import 'layout/header';
+@import 'layout/container';
+@import 'layout/footer';
+@import 'layout/grid';
+@import 'layout/flex';
+
 
 /**
 * Components
 ************************************/
 
 
-/**
-* Layout 
-***********************************/
-@import 'layout/header';
-@import 'layout/main';
-@import 'layout/footer';
-@import 'layout/grid';
-@import 'layout/flex';
+
 
 /**
 * Pages

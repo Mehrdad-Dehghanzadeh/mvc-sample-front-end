@@ -49,7 +49,7 @@
 
 .col-auto {
   flex: 0 0 auto;
-  max-width: auto;
+  max-width: initial;
   width: auto;
 }
 
@@ -74,7 +74,7 @@
 
   @media #{$breakpoint-up-xxl} {
     flex: 0 0 auto;
-    max-width: auto;
+    max-width: initial;
     width: auto;
   }
 }
@@ -100,7 +100,7 @@
 
   @media #{$breakpoint-up-xl} {
     flex: 0 0 auto;
-    max-width: auto;
+    max-width: initial;
     width: auto;
   }
 }
@@ -125,7 +125,7 @@
 
   @media #{$breakpoint-up-lg} {
     flex: 0 0 auto;
-    max-width: auto;
+    max-width: initial;
     width: auto;
   }
 }
@@ -150,7 +150,7 @@
 
   @media #{$breakpoint-up-md} {
     flex: 0 0 auto;
-    max-width: auto;
+    max-width: initial;
     width: auto;
   }
 }
@@ -175,7 +175,7 @@
 
   @media #{$breakpoint-up-sm} {
     flex: 0 0 auto;
-    max-width: auto;
+    max-width: initial;
     width: auto;
   }
 }

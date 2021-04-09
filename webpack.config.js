@@ -24,6 +24,7 @@ const html = {
                 template: path.resolve(this.__Dir, name),
                 minify: false,
                 inject: false,
+                chunks: ['bundle', 'vendor'],
                 scriptLoading: 'blocking'
             }))
         }
@@ -69,6 +70,8 @@ let config = {
 
     entry: {
 
+        browser: 'browser.js',
+
         bundle: [
             // import main scss files
             './scss/main.scss',
@@ -80,7 +83,6 @@ let config = {
             // import scripts
             'helper.js',
             'main.js',
-
         ]
     },
 
