@@ -1,3 +1,5 @@
+@use "sass:math";
+
 /**
 * Grid system
 ****************************************/
@@ -38,12 +40,12 @@
   flex-grow: 1;
 }
 
-// Make col-i class 
+// Make col-i class
 @for $i from 1 through 12 {
   .col-#{$i} {
     padding: 0 15px;
-    flex: 0 0 ($i/12)*100%;
-    max-width: ($i/12)*100%;
+    flex: 0 0 math.div($i, 12)*100%;
+    max-width: math.div($i, 12)*100%;
   }
 }
 
@@ -57,161 +59,161 @@
 /**
 * Column xxl (col-xxl)
 **************************************/
-// Make col-xxl-i class 
+// Make col-xxl-i class
 @for $i from 1 through 12 {
   .col-xxl-#{$i} {
     @extend %initial-col;
 
     @media #{$breakpoint-up-xxl} {
-      flex: 0 0 ($i/12)*100%;
-      max-width: ($i/12)*100%;
+      flex: 0 0 math.div($i, 12) * 100%;
+      max-width: math.div($i, 12) * 100%;
     }
   }
-}
 
-.col-xxl-auto {
-  @extend %initial-col;
+  .col-xxl-auto {
+    @extend %initial-col;
 
-  @media #{$breakpoint-up-xxl} {
-    flex: 0 0 auto;
-    max-width: initial;
-    width: auto;
+    @media #{$breakpoint-up-xxl} {
+      flex: 0 0 auto;
+      max-width: initial;
+      width: auto;
+    }
   }
-}
 
 
-/**
-* Column xl (col-xl)
-**************************************/
-// Make col-xl-i class 
-@for $i from 1 through 12 {
-  .col-xl-#{$i} {
+  /**
+  * Column xl (col-xl)
+  **************************************/
+  // Make col-xl-i class
+  @for $i from 1 through 12 {
+    .col-xl-#{$i} {
+      @extend %initial-col;
+
+      @media #{$breakpoint-up-xl} {
+        flex: 0 0 math.div($i, 12) * 100%;
+        max-width: math.div($i, 12) * 100%;
+      }
+    }
+  }
+
+  .col-xl-auto {
     @extend %initial-col;
 
     @media #{$breakpoint-up-xl} {
-      flex: 0 0 ($i/12)*100%;
-      max-width: ($i/12)*100%;
+      flex: 0 0 auto;
+      max-width: initial;
+      width: auto;
     }
   }
-}
 
-.col-xl-auto {
-  @extend %initial-col;
+  /**
+  * Column lg (col-lg)
+  **************************************/
+  // Make col-lg-i class
+  @for $i from 1 through 12 {
+    .col-lg-#{$i} {
+      @extend %initial-col;
 
-  @media #{$breakpoint-up-xl} {
-    flex: 0 0 auto;
-    max-width: initial;
-    width: auto;
+      @media #{$breakpoint-up-lg} {
+        flex: 0 0 math.div($i, 12) * 100%;
+        max-width: math.div($i, 12) * 100%;
+      }
+    }
   }
-}
 
-/**
-* Column lg (col-lg)
-**************************************/
-// Make col-lg-i class 
-@for $i from 1 through 12 {
-  .col-lg-#{$i} {
+  .col-lg-auto {
     @extend %initial-col;
 
     @media #{$breakpoint-up-lg} {
-      flex: 0 0 ($i/12)*100%;
-      max-width: ($i/12)*100%;
+      flex: 0 0 auto;
+      max-width: initial;
+      width: auto;
     }
   }
-}
 
-.col-lg-auto {
-  @extend %initial-col;
+  /**
+  * Column md (col-md)
+  **************************************/
+  // Make col-md-i class
+  @for $i from 1 through 12 {
+    .col-md-#{$i} {
+      @extend %initial-col;
 
-  @media #{$breakpoint-up-lg} {
-    flex: 0 0 auto;
-    max-width: initial;
-    width: auto;
+      @media #{$breakpoint-up-md} {
+        flex: 0 0 math.div($i, 12) * 100%;
+        max-width: math.div($i, 12) * 100%;
+      }
+    }
   }
-}
 
-/**
-* Column md (col-md)
-**************************************/
-// Make col-md-i class 
-@for $i from 1 through 12 {
-  .col-md-#{$i} {
+  .col-md-auto {
     @extend %initial-col;
 
     @media #{$breakpoint-up-md} {
-      flex: 0 0 ($i/12)*100%;
-      max-width: ($i/12)*100%;
+      flex: 0 0 auto;
+      max-width: initial;
+      width: auto;
     }
   }
-}
 
-.col-md-auto {
-  @extend %initial-col;
+  /**
+  * Column sm (col-sm)
+  **************************************/
+  // Make col-sm-i class
+  @for $i from 1 through 12 {
+    .col-sm-#{$i} {
+      @extend %initial-col;
 
-  @media #{$breakpoint-up-md} {
-    flex: 0 0 auto;
-    max-width: initial;
-    width: auto;
+      @media #{$breakpoint-up-sm} {
+        flex: 0 0 math.div($i, 12) * 100%;
+        max-width: math.div($i, 12) * 100%;
+      }
+    }
   }
-}
 
-/**
-* Column sm (col-sm)
-**************************************/
-// Make col-sm-i class 
-@for $i from 1 through 12 {
-  .col-sm-#{$i} {
+  .col-sm-auto {
     @extend %initial-col;
 
     @media #{$breakpoint-up-sm} {
-      flex: 0 0 ($i/12)*100%;
-      max-width: ($i/12)*100%;
+      flex: 0 0 auto;
+      max-width: initial;
+      width: auto;
     }
   }
-}
 
-.col-sm-auto {
-  @extend %initial-col;
 
-  @media #{$breakpoint-up-sm} {
-    flex: 0 0 auto;
-    max-width: initial;
-    width: auto;
+  /**
+  * Column xs (col-xs)
+  **************************************/
+  // Make col-xs-i class
+  @for $i from 1 through 12 {
+    .col-xs-#{$i} {
+      @extend %initial-col;
+
+      @media #{$breakpoint-up-xs} {
+        flex: 0 0 math.div($i, 12) * 100%;
+        max-width: math.div($i, 12) * 100%;
+      }
+    }
   }
-}
 
-
-/**
-* Column xs (col-xs)
-**************************************/
-// Make col-xs-i class 
-@for $i from 1 through 12 {
-  .col-xs-#{$i} {
+  .col-xs-auto {
     @extend %initial-col;
 
     @media #{$breakpoint-up-xs} {
-      flex: 0 0 ($i/12)*100%;
-      max-width: ($i/12)*100%;
+      flex: 0 0 auto;
+      width: auto;
     }
   }
-}
 
-.col-xs-auto {
-  @extend %initial-col;
+  .no-gutters {
+    margin-right: 0;
+    margin-left: 0;
 
-  @media #{$breakpoint-up-xs} {
-    flex: 0 0 auto;
-    width: auto;
-  }
-}
-
-.no-gutters {
-  margin-right: 0;
-  margin-left: 0;
-
-  > .col,
-  > [class*="col-"] {
-    padding-right: 0;
-    padding-left: 0;
+    > .col,
+    > [class*="col-"] {
+      padding-right: 0;
+      padding-left: 0;
+    }
   }
 }

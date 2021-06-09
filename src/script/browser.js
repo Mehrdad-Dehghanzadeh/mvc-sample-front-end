@@ -1,13 +1,42 @@
-/** 
- * @return { Object }  browser names and Version
- * browser: Firefox | Chrome | Opera | IE | Safari
- */
-navigator.saysWho = (function () {
-    const {
-        userAgent
-    } = navigator
-    let match = userAgent.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || []
-    let temp
+(function () {
+    /**
+     * 
+     * @param {String} path 
+     * @param {Object} settings 
+     */
+    this.CheckBrowser = function (path, settings) {
+        // Defaults options 
+        var defaults = {
+            IE: 11,
+            Safari: 6.1,
+            Firefox: 28,
+            Chrome: 28,
+            Opera: 12.1
+        }
+
+        /**
+         * @param {Object} source 
+         * @param {Object} properties 
+         * @returns {Object} assign (merge) two object
+         */
+        function extendDefaults(source, properties) {
+            var property;
+            for (property in properties) {
+                // eslint-disable-next-line no-prototype-builtins
+                if (source.hasOwnProperty(property)) {
+                    source[property] = properties[property];
+                }
+            }
+            return source;
+        }
+
+        this.options = (settings && typeof settings === "object") ? extendDefaults(defaults, arguments[0]) : defaults;
+
+
+    };
+    var userAgent = navigator.userAgent
+    var match = userAgent.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || []
+    var temp
 
     if (/trident/i.test(match[1])) {
         temp = /\brv[ :]+(\d+)/g.exec(userAgent) || []
@@ -44,27 +73,24 @@ navigator.saysWho = (function () {
         match.splice(1, 1, temp[1])
     }
 
-
     return {
         browser: match[0] === "MSIE" ? "IE" : match[0],
         version: Number(match[1])
     }
 })()
 
-function checkBrowser(url) {
-    var defualt = {
-        IE: 11,
-        Safari: 6.1,
-        Firefox: 28,
-        Chrome: 28,
-        Opera: 12.1
-    };
+// function checkBrowser(url) {
+//     var defualt = {
+//         IE: 11,
+//         Safari: 6.1,
+//         Firefox: 28,
+//         Chrome: 28,
+//         Opera: 12.1
+//     };
 
-    var keys = Object.keys(defualt);
+//     var keys = Object.keys(defualt);
 
-    if (keys.indexOf(navigator.saysWho.browser) != -1 && defualt[navigator.saysWho.browser] > navigator.saysWho.version) {
-        location.replace(url);
-    }
-}
-
-checkBrowser("not-support.html")
+//     if (keys.indexOf(navigator.saysWho.browser) != -1 && defualt[navigator.saysWho.browser] > navigator.saysWho.version) {
+//         location.replace(url);
+//     }
+// }
