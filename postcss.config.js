@@ -16,6 +16,11 @@ module.exports = {
                     /hidden$/,
                     'row',
                     /^col/,
+                    /^container*/,
+                    /^heading*/,
+                    /^subtitle*/,
+                    /^text*/,
+                    /^body*/
                 ],
                 deep: [],
                 greedy: [],
