@@ -1,4 +1,4 @@
-const purgecss = require('@fullhuman/postcss-purgecss')
+const purgecss = require('@fullhuman/postcss-purgecss');
 
 module.exports = {
     plugins: [
@@ -20,9 +20,9 @@ module.exports = {
                 deep: [],
                 greedy: [],
                 keyframes: [],
-                variables: []
+                variables: [],
             },
-            content: ['./src/views/*.html']
+            content: ['./src/views/*.html'],
         }),
-    ]
-}
+    ],
+};

@@ -1,7 +1,24 @@
-function print(arg) {
-  console.log(arg)
+/**
+ * @param {Object} source
+ * @param {Object} properties
+ * @returns {Object} assign (merge) two object
+ */
+export function merge(source, properties) {
+    for (var property in properties) {
+        // eslint-disable-next-line no-prototype-builtins
+        if (source.hasOwnProperty(property)) {
+            source[property] = properties[property];
+        }
+    }
+    return source;
 }
 
-module.exports = {
-  print
+/**
+ * Remove whitespace from a string
+ * @private
+ * @param {String} string
+ * @returns {String}
+ */
+export function trim(string) {
+    return string.replace(/^\s+|\s+$/g, '');
 }

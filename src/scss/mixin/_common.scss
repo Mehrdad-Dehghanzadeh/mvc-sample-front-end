@@ -3,34 +3,33 @@
 *****************************/
 
 @mixin back-ground-dark {
-  background-color: $color-black;
-  color: $color-white;
+    background-color: $color-black;
+    color: $color-white;
 }
 
 @mixin back-ground-white {
-  color: $color-black;
-  background-color: $color-white;
+    color: $color-black;
+    background-color: $color-white;
 }
-
 
 /**
 * Fit Size
 *******************************/
 @mixin fit() {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
 
 /**
 * Fix Size
 *******************************/
 @mixin fixed() {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }

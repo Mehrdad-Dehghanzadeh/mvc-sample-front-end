@@ -1,55 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>صفحه اصلی</title>
+        <%= htmlWebpackPlugin.tags.headTags %>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>صفحه اصلی</title>
-    <%= htmlWebpackPlugin.tags.headTags %>
-</head>
+    <body>
+        <!-- Header -->
 
-<body>
-<!-- Header -->
+        <header class="header" id="header"></header>
 
-<header class="header" id="header">
+        <!-- End Header -->
 
-</header>
+        <!-- Main -->
 
-<!-- End Header -->
+        <main id="main">
+            <div class="layout"></div>
+        </main>
 
-<!-- Main -->
+        <!-- End Main -->
 
-<main id="main">
+        <!-- Footer -->
 
-    <div class="layout">
+        <footer class="footer" id="footer"></footer>
 
-    </div>
+        <!-- End Footer -->
 
-</main>
+        <!-- Scripts -->
+        <%= htmlWebpackPlugin.tags.bodyTags %>
 
-<!-- End Main -->
+        <script type="text/javascript">
+            $(function () {});
+        </script>
 
-<!-- Footer -->
-
-<footer class="footer" id="footer">
-
-</footer>
-
-<!-- End Footer -->
-
-
-<!-- Scripts -->
-<%= htmlWebpackPlugin.tags.bodyTags %>
-
-<script type="text/javascript">
-    $(function() {
-
-    });
-
-</script>
-
-<!-- END Scripts -->
-
-</body>
-
+        <!-- END Scripts -->
+    </body>
 </html>

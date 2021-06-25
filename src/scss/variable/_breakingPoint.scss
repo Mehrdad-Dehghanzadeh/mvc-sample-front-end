@@ -8,19 +8,17 @@ $breakpoint-md: 768px;
 $breakpoint-sm: 576px;
 $breakpoint-xs: 380px;
 
-
 /**
 * Container Max Width
  ****************************************/
 $container-max-widths: (
-  xxl: 1320px,
-  xl: 1140px,
-  lg: 960px,
-  md: 720px,
-  sm: 540px,
-  xs: auto
+    xxl: 1320px,
+    xl: 1140px,
+    lg: 960px,
+    md: 720px,
+    sm: 540px,
+    xs: auto,
 );
-
 
 /**
 * Break Point media queries for up
@@ -41,9 +39,6 @@ $breakpoint-up-lg: 'only screen and (min-width: #{$breakpoint-lg + 1})';
 // Ultra Extra large devices (large desktops, 1200px and up)
 $breakpoint-up-xl: 'only screen and (min-width: #{$breakpoint-xl + 1})';
 $breakpoint-up-xxl: 'only screen and (min-width: #{$breakpoint-xxl + 1})';
-
-
-
 
 /**
 * Break point media queries for down

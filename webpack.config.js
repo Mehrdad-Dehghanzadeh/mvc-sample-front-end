@@ -1,56 +1,57 @@
-const fs = require('fs')
-const path = require('path')
+const fs = require('fs');
+const path = require('path');
 
-const Webpack = require('webpack')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const ProgressBarPlugin = require("progress-bar-webpack-plugin")
-const copyWebpackPlugin = require('copy-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const Chalk = require('chalk')
-const {
-    CleanWebpackPlugin
-} = require("clean-webpack-plugin")
+const Webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ProgressBarPlugin = require('progress-bar-webpack-plugin');
+const copyWebpackPlugin = require('copy-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const Chalk = require('chalk');
+const PrettierPlugin = require('prettier-webpack-plugin');
 
-// get all html file in __Dir 
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
+// get all html file in __Dir
 const html = {
-    __Dir: path.resolve(__dirname, "src/views/"),
+    __Dir: path.resolve(__dirname, 'src/views/'),
 
     entry: [],
 
     add(files) {
         for (let name of files) {
-            this.entry.push(new HtmlWebpackPlugin({
-                filename: name,
-                template: path.resolve(this.__Dir, name),
-                minify: false,
-                inject: false,
-                chunks: ['bundle', 'vendor'],
-                scriptLoading: 'blocking'
-            }))
+            this.entry.push(
+                new HtmlWebpackPlugin({
+                    filename: name,
+                    template: path.resolve(this.__Dir, name),
+                    minify: false,
+                    inject: false,
+                    chunks: ['bundle', 'vendor'],
+                    scriptLoading: 'blocking',
+                })
+            );
         }
     },
 
     modify(fileName, options) {
-        const page = this.entry.find(el => el.options.filename === fileName)
+        const page = this.entry.find((el) => el.options.filename === fileName);
         if (page) {
-            Object.assign(page.options, options)
+            Object.assign(page.options, options);
         } else {
-            throw Error('not found html file')
+            throw Error('not found html file');
         }
     },
 
     readDir() {
         try {
-            const files = fs.readdirSync(this.__Dir)
-            this.add(files)
+            const files = fs.readdirSync(this.__Dir);
+            this.add(files);
         } catch (error) {
-            console.log(error)
+            console.log(error);
         }
-    }
+    },
 };
 
-
-html.readDir()
+html.readDir();
 
 // Webpack Config
 let config = {
@@ -63,13 +64,12 @@ let config = {
     resolve: {
         modules: ['./node_modules', path.resolve(__dirname, 'src/script')],
         alias: {
-            jquery: "jquery/src/jquery",
+            jquery: 'jquery/src/jquery',
             jqueryValidation: 'jquery-validation/dist/jquery.validate.js',
-        }
+        },
     },
 
     entry: {
-
         browser: 'browser.js',
 
         bundle: [
@@ -83,14 +83,13 @@ let config = {
             // import scripts
             'helper.js',
             'main.js',
-        ]
+        ],
     },
 
     performance: {
         maxEntrypointSize: 2124000,
         maxAssetSize: 5244000,
     },
-
 
     // webpack output config
 
@@ -100,9 +99,8 @@ let config = {
         library: {
             name: '[name]',
             type: 'var',
-        }
+        },
     },
-
 
     // webpack plugin config for all mode
 
@@ -112,24 +110,30 @@ let config = {
         new Webpack.ProvidePlugin({
             $: 'jquery',
             jQuery: 'jquery',
-            'window.jQuery': "jquery"
+            'window.jQuery': 'jquery',
         }),
+
+        new PrettierPlugin(),
 
         new ProgressBarPlugin({
-            format: '  build [:bar] ' + Chalk.green.bold(':percent') + ' (:elapsed seconds)',
+            format:
+                '  build [:bar] ' +
+                Chalk.green.bold(':percent') +
+                ' (:elapsed seconds)',
             complete: '#',
-            clear: false
+            clear: false,
         }),
 
-
         new copyWebpackPlugin({
-            patterns: [{
-                from: 'static',
-            },]
+            patterns: [
+                {
+                    from: 'static',
+                },
+            ],
         }),
 
         //add html page
-        ...html.entry
+        ...html.entry,
     ],
 
     module: {
@@ -139,19 +143,18 @@ let config = {
                 loader: 'file-loader',
                 options: {
                     name: '[name]/[name].[ext]',
-                    outputPath: 'fonts'
-                }
-
+                    outputPath: 'fonts',
+                },
             },
             {
                 test: /\.m?js$/,
                 exclude: /node_modules/,
                 use: {
-                    loader: "babel-loader",
+                    loader: 'babel-loader',
                     options: {
-                        presets: ['@babel/preset-env']
-                    }
-                }
+                        presets: ['@babel/preset-env'],
+                    },
+                },
             },
             {
                 test: require.resolve('jquery'),
@@ -159,9 +162,10 @@ let config = {
                     {
                         loader: 'expose-loader',
                         options: {
-                            exposes: ['$', 'jQuery']
-                        }
-                    },]
+                            exposes: ['$', 'jQuery'],
+                        },
+                    },
+                ],
             },
             {
                 test: /\.script\.js$/,
@@ -172,55 +176,49 @@ let config = {
                             sourceMap: true,
                         },
                     },
-                ]
-            }
-        ]
+                ],
+            },
+        ],
     },
 
     optimization: {
         splitChunks: {
             chunks: 'all',
-            name: 'vendor'
-        }
+            name: 'vendor',
+        },
     },
 
     //End webpack plugin config for all mode
-}
+};
 
 // End Webpack Config
 
-module.exports = (env, {
-    mode
-}) => {
+module.exports = (env, { mode }) => {
     // config for development mode
 
     if (mode === 'development') {
-
         // progersive bar minial for development mode
-        config.stats = 'minimal'
+        config.stats = 'minimal';
 
         // config loaders for development mode
         config.module.rules.push(
             ...[
                 {
                     test: /\.(c|sa|sc)ss$/i,
-                    use: ["style-loader", "css-loader", "sass-loader"],
+                    use: ['style-loader', 'css-loader', 'sass-loader'],
                 },
             ]
         );
 
-
         //config dev server for development mode
         config.devServer = {
-            contentBase: path.resolve(__dirname, "dist"),
+            contentBase: path.resolve(__dirname, 'dist'),
             port: 9090,
             open: true,
             hot: true,
-            index: "index.html",
-            watchContentBase: true
-        }
-
-
+            index: 'index.html',
+            watchContentBase: true,
+        };
     }
 
     // config for production mode
@@ -228,38 +226,41 @@ module.exports = (env, {
         // config plugins for production mode
         config.plugins.push(
             new MiniCssExtractPlugin({
-                filename: "css/main.min.css",
+                filename: 'css/main.min.css',
             })
         );
 
         //config fonts loaders for productions mode
-        config.module.rules[0].options.publicPath = '../fonts'
+        config.module.rules[0].options.publicPath = '../fonts';
 
         //config loaders for productions mode
         config.module.rules.push({
             test: /\.(c|sa|sc)ss$/i,
             use: [
                 MiniCssExtractPlugin.loader,
-                "css-loader",
+                'css-loader',
                 {
                     loader: 'postcss-loader',
                     options: {
                         postcssOptions: {
-                            config: path.relative(__dirname, 'postcss.config.js'),
+                            config: path.relative(
+                                __dirname,
+                                'postcss.config.js'
+                            ),
                         },
                     },
                 },
-                "sass-loader"
+                'sass-loader',
             ],
         });
 
         config.stats = {
             assets: true,
             moduleAssets: true,
-            assetsSort: "!size",
+            assetsSort: '!size',
             errors: true,
-        }
+        };
     }
 
-    return config
-}
+    return config;
+};

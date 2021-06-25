@@ -1,60 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <%= htmlWebpackPlugin.tags.headTags %>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <%= htmlWebpackPlugin.tags.headTags %>
-</head>
+    <body>
+        <script type="text/javascript" src="scripts/browser.js" async></script>
 
-<body>
-<script type="text/javascript" src="scripts/browser.js" async>
-</script>
+        <!-- Header -->
 
-<!-- Header -->
+        <header class="header" id="header"></header>
 
-<header class="header" id="header">
+        <!-- End Header -->
 
-</header>
+        <!-- Main -->
 
-<!-- End Header -->
+        <main id="main">
+            <div class="layout">
+                <div class="container">
+                    <div class="mt-20 card-outline">card outline</div>
+                    <div class="mt-20 card">card</div>
+                </div>
+            </div>
+        </main>
 
-<!-- Main -->
+        <!-- End Main -->
 
-<main id="main">
+        <!-- Footer -->
 
-    <div class="layout">
-        <div class="container">
-            <div class="mt-20 card-outline">card outline</div>
-            <div class="mt-20 card">card</div>
-        </div>
-    </div>
+        <footer class="footer" id="footer"></footer>
 
-</main>
+        <!-- End Footer -->
 
-<!-- End Main -->
+        <!-- Scripts -->
+        <%= htmlWebpackPlugin.tags.bodyTags %>
 
-<!-- Footer -->
+        <script type="text/javascript">
+            $(function () {});
+        </script>
 
-<footer class="footer" id="footer">
-
-</footer>
-
-<!-- End Footer -->
-
-
-<!-- Scripts -->
-<%= htmlWebpackPlugin.tags.bodyTags %>
-
-<script type="text/javascript">
-    $(function() {
-
-    });
-
-</script>
-
-<!-- END Scripts -->
-
-</body>
-
+        <!-- END Scripts -->
+    </body>
 </html>

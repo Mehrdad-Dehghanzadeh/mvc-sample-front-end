@@ -1,55 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <%= htmlWebpackPlugin.tags.headTags %>
+    </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <%= htmlWebpackPlugin.tags.headTags %>
-</head>
+    <body>
+        <!-- Header -->
 
-<body>
+        <header class="header" id="header"></header>
 
-  <!-- Header -->
+        <!-- End Header -->
 
-  <header class="header" id="header">
+        <!-- Main -->
 
-  </header>
+        <main id="main">
+            <div class="layout"></div>
+        </main>
 
-  <!-- End Header -->
+        <!-- End Main -->
 
-  <!-- Main -->
+        <!-- Footer -->
 
-  <main id="main">
+        <footer class="footer" id="footer"></footer>
 
-    <div class="layout">
+        <!-- End Footer -->
 
-    </div>
+        <!-- Scripts -->
+        <%= htmlWebpackPlugin.tags.bodyTags %>
 
-  </main>
+        <script type="text/javascript">
+            $(function () {});
+        </script>
 
-  <!-- End Main -->
-
-  <!-- Footer -->
-
-  <footer class="footer" id="footer">
-
-  </footer>
-
-  <!-- End Footer -->
-
-
-  <!-- Scripts -->
-  <%= htmlWebpackPlugin.tags.bodyTags %>
-
-    <script type="text/javascript">
-      $(function () {
-
-      });
-
-    </script>
-
-    <!-- END Scripts -->
-
-</body>
-
+        <!-- END Scripts -->
+    </body>
 </html>

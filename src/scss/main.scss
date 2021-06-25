@@ -5,7 +5,6 @@
 @import 'variable/around';
 @import 'variable/breakingPoint';
 
-
 /**
 * Mixin
 ***********************************/
@@ -13,9 +12,6 @@
 @import 'mixin/common';
 @import 'mixin/text';
 @import 'mixin/spacing';
-
-
-
 
 /**
  * Base
@@ -35,13 +31,10 @@
 @import 'layout/grid';
 @import 'layout/flex';
 
-
 /**
 * Components
 ************************************/
 @import 'components/card';
-
-
 
 /**
 * Pages

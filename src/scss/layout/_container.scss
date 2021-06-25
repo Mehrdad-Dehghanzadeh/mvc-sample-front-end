@@ -1,7 +1,7 @@
 #main {
-  width: 100%;
-  overflow: hidden;
-  padding: 0 $page-padding-x;
+    width: 100%;
+    overflow: hidden;
+    padding: 0 $page-padding-x;
 }
 
 /**
@@ -9,35 +9,35 @@
 ***************************************/
 
 .container {
-  @include make-container(map_get($container-max-widths, 'xxl'));
+    @include make-container(map_get($container-max-widths, 'xxl'));
 
-  @media #{$breakpoint-down-xxl} {
-    max-width: map_get($container-max-widths, xl);
-  }
+    @media #{$breakpoint-down-xxl} {
+        max-width: map_get($container-max-widths, xl);
+    }
 
-  @media #{$breakpoint-down-xl} {
-    max-width: map_get($container-max-widths, lg);
-  }
+    @media #{$breakpoint-down-xl} {
+        max-width: map_get($container-max-widths, lg);
+    }
 
-  @media #{$breakpoint-down-lg} {
-    max-width: map_get($container-max-widths, md);
-  }
+    @media #{$breakpoint-down-lg} {
+        max-width: map_get($container-max-widths, md);
+    }
 
-  @media #{$breakpoint-down-md} {
-    max-width: map_get($container-max-widths, sm);
-  }
+    @media #{$breakpoint-down-md} {
+        max-width: map_get($container-max-widths, sm);
+    }
 
-  @media #{$breakpoint-down-sm} {
-    max-width: map_get($container-max-widths, xs);
-  }
+    @media #{$breakpoint-down-sm} {
+        max-width: map_get($container-max-widths, xs);
+    }
 
-  @media #{$breakpoint-down-xs} {
-    max-width: 100%;
-    padding-left: $page-padding-x;
-    padding-right: $page-padding-x;
-  }
+    @media #{$breakpoint-down-xs} {
+        max-width: 100%;
+        padding-left: $page-padding-x;
+        padding-right: $page-padding-x;
+    }
 }
 
 .container-fluid {
-  @include make-container();
+    @include make-container();
 }

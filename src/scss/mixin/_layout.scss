@@ -3,44 +3,43 @@
 *****************************************/
 
 @mixin flex-row($row: row) {
-  display: flex;
-  flex-direction: $row;
+    display: flex;
+    flex-direction: $row;
 }
 
 @mixin flex-column($column: column) {
-  display: flex;
-  flex-direction: $column;
+    display: flex;
+    flex-direction: $column;
 }
 
 @mixin inline-block($vertical-align: middle) {
-  display: inline-block;
-  vertical-align: $vertical-align;
+    display: inline-block;
+    vertical-align: $vertical-align;
 }
 
 @mixin inline($vertical-align: middle) {
-  display: inline;
-  vertical-align: $vertical-align;
+    display: inline;
+    vertical-align: $vertical-align;
 }
 
 @mixin block-right {
-  display: block;
-  float: right;
+    display: block;
+    float: right;
 }
 
 @mixin block-left {
-  display: block;
-  float: left;
+    display: block;
+    float: left;
 }
-
 
 /**
 * Container
 **************************************/
 @mixin make-container($max-width: 100%) {
-  max-width: $max-width;
-  min-height: $container-min-height;
-  padding-top: $container-padding-top;
-  padding-bottom: $container-padding-bottom;
-  margin-right: auto;
-  margin-left: auto;
+    max-width: $max-width;
+    min-height: $container-min-height;
+    padding-top: $container-padding-top;
+    padding-bottom: $container-padding-bottom;
+    margin-right: auto;
+    margin-left: auto;
 }
