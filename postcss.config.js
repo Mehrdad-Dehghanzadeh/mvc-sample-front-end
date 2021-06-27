@@ -20,7 +20,7 @@ module.exports = {
                     /^heading*/,
                     /^subtitle*/,
                     /^text*/,
-                    /^body*/
+                    /^body*/,
                 ],
                 deep: [],
                 greedy: [],

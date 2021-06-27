@@ -5,6 +5,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>UIKIT</title>
         <%= htmlWebpackPlugin.tags.headTags %>
+
+        <style>
+            .color-item {
+                display: flex;
+                flex-direction: column;
+                border-radius: 8px;
+                padding: 20px 10px 10px;
+                text-align: center;
+                align-items: center;
+            }
+
+            .color-item > .heading-5 {
+                margin: 10px 0 5px;
+            }
+
+            .color-item__sample {
+                min-width: 80px;
+                height: 80px;
+                border-radius: 8px;
+            }
+        </style>
     </head>
 
     <body>
@@ -38,6 +59,7 @@
                                 <h3 class="heading-5">heading-5</h3>
                                 <h3 class="heading-6">heading-6</h3>
                             </div>
+
                             <div class="col-md-6 text-center">
                                 <p class="subtitle-1">subtitle-1</p>
                                 <p class="subtitle-2">subtitle-2</p>
@@ -59,6 +81,163 @@
                         <div class="mt-20 card">card</div>
                     </section>
                     <!-- Cards -->
+
+                    <!-- Colors -->
+                    <section class="mt-20">
+                        <h2 class="heading-2 text-center">colors</h2>
+                        <div class="divider"></div>
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="color-item">
+                                    <div
+                                        class="color-item__sample"
+                                        style="background-color: #21217c"
+                                    ></div>
+                                    <h3 class="heading-5">color-primary</h3>
+                                    <p class="subtitle-1">#21217c</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="color-item">
+                                    <div
+                                        class="color-item__sample"
+                                        style="background-color: #2f2faf"
+                                    ></div>
+                                    <h3 class="heading-5">
+                                        color-primary-light-1
+                                    </h3>
+                                    <p class="subtitle-1">#2f2faf</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="color-item">
+                                    <div
+                                        class="color-item__sample"
+                                        style="background-color: #3535c8"
+                                    ></div>
+                                    <h3 class="heading-5">
+                                        color-primary-light-2
+                                    </h3>
+                                    <p class="subtitle-1">#3535c8</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="color-item">
+                                    <div
+                                        class="color-item__sample"
+                                        style="background-color: #14144a"
+                                    ></div>
+                                    <h3 class="heading-5">
+                                        color-primary-darken-1
+                                    </h3>
+                                    <p class="subtitle-1">#14144a</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="color-item">
+                                    <div
+                                        class="color-item__sample"
+                                        style="background-color: #47e644"
+                                    ></div>
+                                    <h3 class="heading-5">color-secondary</h3>
+                                    <p class="subtitle-1">#47e644</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="color-item">
+                                    <div
+                                        class="color-item__sample"
+                                        style="background-color: #21dc1e"
+                                    ></div>
+                                    <h3 class="heading-5">
+                                        color-secondary-light-1
+                                    </h3>
+                                    <p class="subtitle-1">#21dc1e</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="color-item">
+                                    <div
+                                        class="color-item__sample"
+                                        style="background-color: #5be858"
+                                    ></div>
+                                    <h3 class="heading-5">
+                                        color-secondary-light-2
+                                    </h3>
+                                    <p class="subtitle-1">#5be858</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="color-item">
+                                    <div
+                                        class="color-item__sample"
+                                        style="background-color: #137b11"
+                                    ></div>
+                                    <h3 class="heading-5">
+                                        color-secondary-darken-1
+                                    </h3>
+                                    <p class="subtitle-1">#137b11</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="color-item">
+                                    <div
+                                        class="color-item__sample"
+                                        style="background-color: #0a4309"
+                                    ></div>
+                                    <h3 class="heading-5">
+                                        color-secondary-darken-2
+                                    </h3>
+                                    <p class="subtitle-1">#0a4309</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="color-item">
+                                    <div
+                                        class="color-item__sample"
+                                        style="background-color: #0d0d31"
+                                    ></div>
+                                    <h3 class="heading-5">
+                                        color-primary-darken-2
+                                    </h3>
+                                    <p class="subtitle-1">#0d0d31</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="color-item">
+                                    <div
+                                        class="color-item__sample"
+                                        style="background-color: #d3d3d3"
+                                    ></div>
+                                    <h3 class="heading-5">color-gray</h3>
+                                    <p class="subtitle-1">d3d3d3#</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="color-item">
+                                    <div
+                                        class="color-item__sample"
+                                        style="background-color: #ebebeb"
+                                    ></div>
+                                    <h3 class="heading-5">color-disable</h3>
+                                    <p class="subtitle-1">ebebeb#</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Colors -->
                 </div>
             </div>
         </main>
