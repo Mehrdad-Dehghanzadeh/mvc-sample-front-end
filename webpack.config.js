@@ -82,6 +82,7 @@ let config = {
 
             // import scripts
             'helper.js',
+            'modal.js',
             'main.js',
         ],
     },

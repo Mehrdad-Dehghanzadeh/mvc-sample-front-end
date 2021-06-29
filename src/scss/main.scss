@@ -4,6 +4,7 @@
 @import 'variable/color';
 @import 'variable/around';
 @import 'variable/breakingPoint';
+@import 'variable/z-index';
 
 /**
 * Mixin
@@ -36,6 +37,7 @@
 ************************************/
 @import 'components/divider';
 @import 'components/card';
+@import 'components/modal';
 
 /**
 * Pages

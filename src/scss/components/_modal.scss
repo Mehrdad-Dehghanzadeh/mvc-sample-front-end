@@ -1,0 +1,18 @@
+/**
+* Modal
+ ******************************/
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba($color-black, 0.75);
+    z-index: $modal-index;
+    @include fixed();
+
+    .modal__container {
+        padding: 20px 15px;
+        background-color: $color-white;
+        border-radius: 10px;
+        min-width: 300px;
+    }
+}
