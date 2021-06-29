@@ -7,12 +7,39 @@
     align-items: center;
     background-color: rgba($color-black, 0.75);
     z-index: $modal-index;
+    padding: 0 20px;
     @include fixed();
 
     .modal__container {
         padding: 20px 15px;
         background-color: $color-white;
         border-radius: 10px;
-        min-width: 300px;
+        flex-basis: 380px;
+        box-shadow: 0 0 5px 0 rgba(21, 21, 21, 0.45);
+        min-height: 300px;
+
+        &--full {
+            flex-basis: 100%;
+        }
+
+        &--auto {
+            flex-basis: auto;
+        }
+
+        &--xl {
+            flex-basis: 1140px;
+        }
+
+        &--lg {
+            flex-basis: 960px;
+        }
+
+        &--md {
+            flex-basis: 720px;
+        }
+
+        &--sm {
+            flex-basis: 540px;
+        }
     }
 }

@@ -4,7 +4,7 @@ import { merge } from './helper';
 
     var defaults = {
         id: 'modal', // this property is required
-        size: 'lg', // includes lg, sm, xs, auto
+        size: 'lg', // includes xl, lg, md, sm, full, auto
         title: '',
         closeOutSide: true,
     };
@@ -22,6 +22,16 @@ import { merge } from './helper';
 
     $.extend(Modal.prototype, {
         init: function () {},
+
+        appendContent: function () {
+            var contents = this.element.contents();
+            this.element.html('');
+            this.element.append(
+                '<div class="modal__container modal__container--' +
+                    this.settings.size +
+                    '"></div>'
+            );
+        },
     });
 
     $.fn[pluginName] = function (options) {
