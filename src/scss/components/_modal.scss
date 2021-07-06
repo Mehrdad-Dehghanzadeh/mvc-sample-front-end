@@ -2,7 +2,7 @@
 * Modal
  ******************************/
 .modal {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     background-color: rgba($color-black, 0.75);
@@ -41,5 +41,9 @@
         &--sm {
             flex-basis: 540px;
         }
+    }
+
+    &--open {
+        display: flex;
     }
 }

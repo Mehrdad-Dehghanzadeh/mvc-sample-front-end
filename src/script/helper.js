@@ -3,7 +3,7 @@
  * @param {Object} properties
  * @returns {Object} assign (merge) two object
  */
-export function merge(source, properties) {
+function merge(source, properties) {
     for (var property in properties) {
         // eslint-disable-next-line no-prototype-builtins
         if (source.hasOwnProperty(property)) {
@@ -19,6 +19,11 @@ export function merge(source, properties) {
  * @param {String} string
  * @returns {String}
  */
-export function trim(string) {
+function trim(string) {
     return string.replace(/^\s+|\s+$/g, '');
 }
+
+module.exports = {
+    merge,
+    trim,
+};

@@ -21,7 +21,7 @@ module.exports = {
                     /^subtitle*/,
                     /^text*/,
                     /^body*/,
-                    /^modal*/
+                    /^modal*/,
                 ],
                 deep: [],
                 greedy: [],

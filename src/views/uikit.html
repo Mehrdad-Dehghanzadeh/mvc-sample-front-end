@@ -243,7 +243,9 @@
                     <section class="mt-20">
                         <h2 class="heading-2 text-center">Modal</h2>
                         <div class="divider"></div>
-                        <span>modal</span>
+                        <span class="trigger" data-plugin_modal="{id: 'modal'}"
+                            >modal</span
+                        >
                     </section>
                     <!-- modal -->
                 </div>
@@ -257,6 +259,10 @@
         <footer class="footer" id="footer"></footer>
 
         <!-- End Footer -->
+        <div class="modal" id="modal">
+            <span></span>
+            <div class=""></div>
+        </div>
 
         <!-- Scripts -->
         <%= htmlWebpackPlugin.tags.bodyTags %>
