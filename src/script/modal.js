@@ -20,25 +20,67 @@ const { merge } = require('./helper');
     };
 
     /****** Private Functions ******/
+
+    // Create Header Of Modal
     function _setHeader(that) {
-        that.element.append('<div class="modal__header"></div>');
+        var header = $('<div class="modal__header"></div>');
+        header.prepend('<span class="modal__close">x</span>');
+
+        if (that.settings.title) {
+            header.append(
+                '<h2 class="modal__title">' + that.settings.title + '</h2>'
+            );
+        }
+
+        that.element.children('.modal__container').prepend(header);
     }
 
+    // Create Container Of Modal
     function _setContainer(that, contents) {
         that.element.append(
             '<div class="modal__container modal__container--' +
                 that.settings.size +
-                '"></div>'
+                '">' +
+                '<div class="modal-content"></div>' +
+                '</div>'
         );
-        that.element.children('.modal__container').html(contents);
+        that.element.find('.modal-content').html(contents);
     }
 
+    // Create Modal
     function _setModal(that) {
         var contents = that.element.contents(); // clone content
         that.element.html(''); // clear inner HTML modal
 
-        _setHeader(that);
         _setContainer(that, contents); // append cloned content
+        _setHeader(that);
+    }
+
+    function _attachEvents(that) {
+        var id = that.element.attr('id');
+
+        // Add Trigger Event To Opening Modal
+        $('[data-trigger="' + id + '"]').click(function (event) {
+            event.preventDefault();
+            $('body').addClass('modal-is-open');
+            that.open();
+        });
+
+        // Add Close Modal
+
+        if (that.settings.closeOutSide) {
+            that.element.click(function (event) {
+                if ($(event.target).hasClass('modal')) {
+                    event.stopPropagation();
+                    that.close();
+                }
+            });
+        }
+
+        $('.modal__close').click(function (event) {
+            event.stopPropagation();
+            that.close();
+        });
     }
 
     /****** Private Functions ******/
@@ -47,12 +89,16 @@ const { merge } = require('./helper');
 
     $.extend(Modal.prototype, {
         init: function () {
-            this.open();
             _setModal(this);
+            _attachEvents(this);
         },
 
         open: function () {
             this.element.addClass('modal--open');
+        },
+
+        close: function () {
+            this.element.removeClass('modal--open');
         },
     });
 
@@ -87,5 +133,11 @@ const { merge } = require('./helper');
         });
     };
 
-    // $[pluginName] = Modal;
+    $[pluginName] = Modal;
 })(jQuery);
+
+$('[data-plugin_modal]').each(function () {
+    var options = $(this).data('plugin_modal');
+    var id = '#' + $(this).data('trigger');
+    $(id).modal(options);
+});
