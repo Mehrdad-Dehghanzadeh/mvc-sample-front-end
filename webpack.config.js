@@ -82,6 +82,7 @@ let config = {
 
             // import scripts
             'helper.js',
+            'modal.js',
             'main.js',
         ],
     },
@@ -96,10 +97,10 @@ let config = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'scripts/[name].js',
-        library: {
-            name: '[name]',
-            type: 'var',
-        },
+        library: '$u',
+        libraryTarget: 'var',
+        // libraryExport: 'default',
+
     },
 
     // webpack plugin config for all mode
@@ -218,6 +219,10 @@ module.exports = (env, { mode }) => {
             hot: true,
             index: 'index.html',
             watchContentBase: true,
+            headers: {
+                "Access-Control-Allow-Origin": "*",
+                https: true
+            }
         };
     }
 

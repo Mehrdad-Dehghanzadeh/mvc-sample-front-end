@@ -1,0 +1,81 @@
+/**
+* Modal
+ ******************************/
+.modal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba($color-black, 0.75);
+    z-index: $modal-index;
+    padding: 0 20px;
+    @include fixed();
+
+    .modal__container {
+        padding: 20px 15px;
+        background-color: $color-white;
+        border-radius: 10px;
+        flex-basis: 380px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        box-shadow: 0 0 5px 0 rgba(21, 21, 21, 0.45);
+        min-height: 300px;
+        max-height: calc(100vh - 100px);
+
+        &--full {
+            flex-basis: 100%;
+        }
+
+        &--auto {
+            flex-basis: auto;
+        }
+
+        &--xl {
+            flex-basis: 1140px;
+        }
+
+        &--lg {
+            flex-basis: 960px;
+        }
+
+        &--md {
+            flex-basis: 720px;
+        }
+
+        &--sm {
+            flex-basis: 540px;
+        }
+    }
+
+    &--open {
+        display: flex;
+    }
+
+    &__header {
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    &__title {
+        text-align: center;
+        padding: 5px 0 15px;
+        border-bottom: 1px solid $color-gray;
+    }
+
+    &__close {
+        $size: 30px;
+        background-color: $color-red;
+        color: $color-white;
+        width: $size;
+        height: $size;
+        line-height: $size;
+        position: absolute;
+        border-radius: 30px;
+        cursor: pointer;
+        text-align: center;
+        transition: width, height ease 250ms;
+    }
+}
+
+.modal-is-open {
+    overflow: hidden;
+}
