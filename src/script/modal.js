@@ -17,6 +17,7 @@ const { merge } = require('./helper');
         size: 'sm', // includes xl, lg, md, sm, full, auto
         title: '',
         closeOutSide: true,
+        topClose: true, // top button close
     };
 
     /****** Private Functions ******/
@@ -24,7 +25,11 @@ const { merge } = require('./helper');
     // Create Header Of Modal
     function _setHeader(that) {
         var header = $('<div class="modal__header"></div>');
-        header.prepend('<span class="modal__close">x</span>');
+
+        // top close Button
+        if (that.settings.topClose) {
+            header.prepend('<span class="modal__close">x</span>');
+        }
 
         if (that.settings.title) {
             header.append(
@@ -62,12 +67,10 @@ const { merge } = require('./helper');
         // Add Trigger Event To Opening Modal
         $('[data-trigger="' + id + '"]').click(function (event) {
             event.preventDefault();
-            $('body').addClass('modal-is-open');
             that.open();
         });
 
         // Add Close Modal
-
         if (that.settings.closeOutSide) {
             that.element.click(function (event) {
                 if ($(event.target).hasClass('modal')) {
@@ -94,10 +97,12 @@ const { merge } = require('./helper');
         },
 
         open: function () {
+            $('body').addClass('modal-is-open');
             this.element.addClass('modal--open');
         },
 
         close: function () {
+            $('body').removeClass('modal-is-open');
             this.element.removeClass('modal--open');
         },
     });
