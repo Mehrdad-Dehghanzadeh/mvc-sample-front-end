@@ -46,6 +46,7 @@ button {
   background-color: inherit;
   font-size: 1rem;
   -webkit-tap-highlight-color: hsl(0, 0%, 0.1%);
+  outline: none;
 }
 
 /**
@@ -85,3 +86,8 @@ html {
   overflow: hidden;
   padding: 0 $page-padding-x;
 }
+
+.direction-ltr {
+  direction: ltr;
+}
+
