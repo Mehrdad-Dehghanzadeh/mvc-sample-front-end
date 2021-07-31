@@ -2,22 +2,22 @@
 * Divider
  **************************************/
 %divider-abstract {
-    width: 100%;
-    height: 0;
-    margin: 20px auto;
+  width: 100%;
+  height: 0;
+  margin: 20px auto;
 }
 
 .divider {
-    @extend %divider-abstract;
-    border-bottom: 1px solid $color-gray;
+  @extend %divider-abstract;
+  border-bottom: 1px solid $color-gray;
 }
 
 .divider-dashed {
-    @extend %divider-abstract;
-    border-bottom: 2px dashed $color-gray;
+  @extend %divider-abstract;
+  border-bottom: 2px dashed $color-gray;
 }
 
 .divider-dotted {
-    @extend %divider-abstract;
-    border-bottom: 2px dotted $color-gray;
+  @extend %divider-abstract;
+  border-bottom: 2px dotted $color-gray;
 }
