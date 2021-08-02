@@ -167,18 +167,7 @@ let config = {
                         },
                     },
                 ],
-            },
-            {
-                test: /\.script\.js$/,
-                use: [
-                    {
-                        loader: 'script-loader',
-                        options: {
-                            sourceMap: true,
-                        },
-                    },
-                ],
-            },
+            }
         ],
     },
 
