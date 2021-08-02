@@ -3,35 +3,35 @@
  **************************/
 
 @mixin make-margin($point, $value) {
-    @if $point == top {
-        .mt-#{$value} {
-            margin-top: $value + px;
-        }
-    } @else if $point == right {
-        .mr-#{$value} {
-            margin-right: $value + px;
-        }
-    } @else if $point == bottom {
-        .mb-#{$value} {
-            margin-bottom: $value + px;
-        }
-    } @else if $point == left {
-        .ml-#{$value} {
-            margin-left: $value + px;
-        }
-    } @else if $point == 'x' {
-        .mx-#{$value} {
-            margin-right: $value + px;
-            margin-left: $value + px;
-        }
-    } @else if $point == 'y' {
-        .my-#{$value} {
-            margin-top: $value + px;
-            margin-bottom: $value + px;
-        }
-    } @else {
-        @error "Unknown direction #{$point}.";
+  @if $point == top {
+    .mt-#{$value} {
+      margin-top: $value + px;
     }
+  } @else if $point == right {
+    .mr-#{$value} {
+      margin-right: $value + px;
+    }
+  } @else if $point == bottom {
+    .mb-#{$value} {
+      margin-bottom: $value + px;
+    }
+  } @else if $point == left {
+    .ml-#{$value} {
+      margin-left: $value + px;
+    }
+  } @else if $point == 'x' {
+    .mx-#{$value} {
+      margin-right: $value + px;
+      margin-left: $value + px;
+    }
+  } @else if $point == 'y' {
+    .my-#{$value} {
+      margin-top: $value + px;
+      margin-bottom: $value + px;
+    }
+  } @else {
+    @error "Unknown direction #{$point}.";
+  }
 }
 
 /**
@@ -39,53 +39,53 @@
  **************************/
 
 @mixin make-padding($point, $value) {
-    @if $point == top {
-        .pt-#{$value} {
-            padding-top: $value + px;
-        }
-    } @else if $point == right {
-        .pr-#{$value} {
-            padding-right: $value + px;
-        }
-    } @else if $point == bottom {
-        .pb-#{$value} {
-            padding-bottom: $value + px;
-        }
-    } @else if $point == left {
-        .pl-#{$value} {
-            padding-left: $value + px;
-        }
-    } @else if $point == 'x' {
-        .px-#{$value} {
-            padding-right: $value + px;
-            padding-left: $value + px;
-        }
-    } @else if $point == 'y' {
-        .py-#{$value} {
-            padding-top: $value + px;
-            padding-bottom: $value + px;
-        }
-    } @else {
-        @error "Unknown direction #{$point}.";
+  @if $point == top {
+    .pt-#{$value} {
+      padding-top: $value + px;
     }
+  } @else if $point == right {
+    .pr-#{$value} {
+      padding-right: $value + px;
+    }
+  } @else if $point == bottom {
+    .pb-#{$value} {
+      padding-bottom: $value + px;
+    }
+  } @else if $point == left {
+    .pl-#{$value} {
+      padding-left: $value + px;
+    }
+  } @else if $point == 'x' {
+    .px-#{$value} {
+      padding-right: $value + px;
+      padding-left: $value + px;
+    }
+  } @else if $point == 'y' {
+    .py-#{$value} {
+      padding-top: $value + px;
+      padding-bottom: $value + px;
+    }
+  } @else {
+    @error "Unknown direction #{$point}.";
+  }
 }
 
 // adding margin class
 @for $i from 1 through 20 {
-    @include make-margin(top, $i * 5);
-    @include make-margin(right, $i * 5);
-    @include make-margin(bottom, $i * 5);
-    @include make-margin(left, $i * 5);
-    @include make-margin('x', $i * 5);
-    @include make-margin('y', $i * 5);
+  @include make-margin(top, $i * 5);
+  @include make-margin(right, $i * 5);
+  @include make-margin(bottom, $i * 5);
+  @include make-margin(left, $i * 5);
+  @include make-margin('x', $i * 5);
+  @include make-margin('y', $i * 5);
 }
 
 // adding padding class
 @for $i from 1 through 20 {
-    @include make-padding(top, $i * 5);
-    @include make-padding(right, $i * 5);
-    @include make-padding(bottom, $i * 5);
-    @include make-padding(left, $i * 5);
-    @include make-padding('x', $i * 5);
-    @include make-padding('y', $i * 5);
+  @include make-padding(top, $i * 5);
+  @include make-padding(right, $i * 5);
+  @include make-padding(bottom, $i * 5);
+  @include make-padding(left, $i * 5);
+  @include make-padding('x', $i * 5);
+  @include make-padding('y', $i * 5);
 }

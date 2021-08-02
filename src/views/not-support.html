@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Not Support</title>
-        <%= htmlWebpackPlugin.tags.headTags %>
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Not Support</title>
+    <%= htmlWebpackPlugin.tags.headTags %>
+  </head>
 
-    <body>
-        <!-- Main -->
+  <body>
+    <!-- Main -->
 
-        <main id="main">
-            <div class="container-sm"></div>
-        </main>
+    <main id="main">
+      <div class="container">
+        <h1 class="heading-1 text-center">your browser is not support</h1>
+      </div>
+    </main>
 
-        <!-- End Main -->
+    <!-- End Main -->
 
-        <!-- Scripts -->
-        <%= htmlWebpackPlugin.tags.bodyTags %>
+    <!-- Scripts -->
+    <%= htmlWebpackPlugin.tags.bodyTags %>
 
-        <script type="text/javascript">
-            $(function () {});
-        </script>
+    <script type="text/javascript">
+      $(function () {});
+    </script>
 
-        <!-- END Scripts -->
-    </body>
+    <!-- END Scripts -->
+  </body>
 </html>

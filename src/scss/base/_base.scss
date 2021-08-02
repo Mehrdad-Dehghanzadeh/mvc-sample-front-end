@@ -2,49 +2,51 @@
  * Form Elements
  * *********************************/
 @-webkit-keyframes autofill {
-    to {
-        color: inherit;
-        background: #fff;
-    }
+  to {
+    color: inherit;
+    background: #fff;
+  }
 }
 
 input:-webkit-autofill {
-    -webkit-animation-name: autofill;
-    -webkit-animation-fill-mode: both;
+  -webkit-animation-name: autofill;
+  -webkit-animation-fill-mode: both;
 }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 input[type='number'] {
-    -moz-appearance: textfield;
+  -moz-appearance: textfield;
 }
 
 :-moz-placeholder,
 ::-moz-placeholder,
 :-ms-input-placeholder,
 ::-webkit-input-placeholder {
-    opacity: 1;
+  opacity: 1;
 }
 
 input::-ms-clear,
 input::-ms-reveal {
-    display: none;
+  display: none;
 }
 
 select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 button {
-    border: none;
-    background-color: inherit;
-    -webkit-tap-highlight-color: hsl(0, 0%, 0.1%);
+  border: none;
+  background-color: inherit;
+  font-size: 1rem;
+  -webkit-tap-highlight-color: hsl(0, 0%, 0.1%);
+  outline: none;
 }
 
 /**
@@ -55,19 +57,19 @@ a,
 a:hover,
 a:focus,
 a:active {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 a {
-    cursor: pointer;
-    color: inherit;
+  cursor: pointer;
+  color: inherit;
 }
 
 /**
 * lists
 **********************************/
 ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 /**
@@ -80,7 +82,11 @@ html {
  * main
 **********************************/
 #main {
-    width: 100%;
-    overflow: hidden;
-    padding: 0 $page-padding-x;
+  width: 100%;
+  overflow: hidden;
+  padding: 0 $page-padding-x;
+}
+
+.direction-ltr {
+  direction: ltr;
 }

@@ -1,0 +1,37 @@
+@mixin make-btn($className, $fg-color, $bg-color) {
+  .btn-#{$className} {
+    color: $fg-color;
+    background-color: $bg-color;
+    box-shadow: 0 0 4px 0 rgba($bg-color, 0.8);
+    transition: color, background-color ease 200ms;
+
+    &:hover {
+      background-color: darken($bg-color, 10%);
+      color: darken($fg-color, 10%);
+    }
+
+    &:active {
+      box-shadow: none;
+      border: 2px solid darken($bg-color, 18%);
+    }
+  }
+}
+
+@mixin make-outline-btn($className, $fg-color, $bg-color: #fff) {
+  .btn-outline-#{$className} {
+    color: $fg-color;
+    background-color: $bg-color;
+    border: 2px solid $fg-color;
+    transition: color, background-color ease 200ms;
+
+    &:hover {
+      background-color: $fg-color;
+      color: $bg-color;
+    }
+
+    &:active {
+      box-shadow: 0 0 5px 0 $fg-color;
+      border: none;
+    }
+  }
+}

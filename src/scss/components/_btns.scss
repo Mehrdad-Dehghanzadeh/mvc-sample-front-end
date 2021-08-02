@@ -1,0 +1,87 @@
+$btn-width: (
+  xs: 64px,
+  sm: 96px,
+  md: 128px,
+  lg: 196px,
+  xl: 256px,
+  wide: 256px,
+);
+
+$btn-height: (
+  xs: 36px,
+  sm: 54px,
+  md: 64px,
+  lg: 72px,
+  xl: 94px,
+  wide: 64px,
+);
+
+/************************
+ *   Button
+ *************************/
+.btn {
+  text-align: center;
+  padding: 8px 16px;
+  margin: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  overflow: hidden;
+  border-radius: 8px;
+  width: map_get($btn-width, md);
+  height: map_get($btn-height, md);
+
+  &--xs {
+    border-radius: 5px;
+    padding: 4px;
+    width: map_get($btn-width, xs);
+    height: map_get($btn-height, xs);
+    font-size: 0.8rem;
+  }
+
+  &--sm {
+    border-radius: 6px;
+    padding: 8px;
+    width: map_get($btn-width, sm);
+    height: map_get($btn-height, sm);
+    font-size: 0.8rem;
+  }
+
+  &--lg {
+    border-radius: 10px;
+    width: map_get($btn-width, lg);
+    height: map_get($btn-height, lg);
+  }
+
+  &--xl {
+    border-radius: 12px;
+    width: map_get($btn-width, xl);
+    height: map_get($btn-height, xl);
+  }
+
+  &--wide {
+    border-radius: 12px;
+    width: map_get($btn-width, wide);
+    height: map_get($btn-height, wide);
+  }
+
+  &--block {
+    display: block;
+  }
+
+  &--flex {
+    display: flex;
+  }
+
+  &--font-normal {
+    font-weight: normal;
+  }
+
+  &--font-bolder {
+    font-weight: bolder;
+  }
+}
+
+@include make-btn('primary', #fff, $color-primary);
+@include make-outline-btn('primary', $color-primary);
+@include make-btn('secondary', #fff, $color-secondary);
+@include make-outline-btn('secondary', $color-secondary);

@@ -4,13 +4,13 @@
  * @returns {Object} assign (merge) two object
  */
 function merge(source, properties) {
-    for (var property in properties) {
-        // eslint-disable-next-line no-prototype-builtins
-        if (source.hasOwnProperty(property)) {
-            source[property] = properties[property];
-        }
+  for (var property in properties) {
+    // eslint-disable-next-line no-prototype-builtins
+    if (source.hasOwnProperty(property)) {
+      source[property] = properties[property];
     }
-    return source;
+  }
+  return source;
 }
 
 /**
@@ -20,10 +20,10 @@ function merge(source, properties) {
  * @returns {String}
  */
 function trim(string) {
-    return string.replace(/^\s+|\s+$/g, '');
+  return string.replace(/^\s+|\s+$/g, '');
 }
 
 module.exports = {
-    merge,
-    trim,
+  merge,
+  trim,
 };
