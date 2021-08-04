@@ -5,6 +5,7 @@
 @import 'variable/around';
 @import 'variable/breakingPoint';
 @import 'variable/z-index';
+@import 'variable/icons';
 
 /**
 * Mixin
@@ -14,6 +15,7 @@
 @import 'mixin/text';
 @import 'mixin/spacing';
 @import 'mixin/btn';
+@import 'mixin/spacing';
 
 /**
  * Base
@@ -21,8 +23,8 @@
 @import 'base/reset';
 @import 'base/base';
 @import 'base/fonts';
+@import 'base/font-icons';
 @import 'base/typography';
-@import 'mixin/spacing';
 
 /**
 * Layout
