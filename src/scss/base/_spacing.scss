@@ -1,0 +1,19 @@
+// adding margin class
+@for $i from 1 through 20 {
+  @include make-margin(top, $i * 5);
+  @include make-margin(right, $i * 5);
+  @include make-margin(bottom, $i * 5);
+  @include make-margin(left, $i * 5);
+  @include make-margin('x', $i * 5);
+  @include make-margin('y', $i * 5);
+}
+
+// adding padding class
+@for $i from 1 through 20 {
+  @include make-padding(top, $i * 5);
+  @include make-padding(right, $i * 5);
+  @include make-padding(bottom, $i * 5);
+  @include make-padding(left, $i * 5);
+  @include make-padding('x', $i * 5);
+  @include make-padding('y', $i * 5);
+}
