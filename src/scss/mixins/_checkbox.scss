@@ -1,0 +1,33 @@
+@use "sass:math";
+
+@mixin checkbox-maker(
+  $size: 18px,
+  $bg-color: $color-primary-light-1,
+  $fg-color: #fff
+) {
+  .check-box__element {
+    width: $size;
+    height: $size;
+    line-height: $size;
+    border-radius: math.floor(math.div($size, 8));
+
+    &:after {
+      color: $fg-color;
+    }
+
+    &:hover {
+      background-color: lighten($bg-color, 20%);
+      border: none;
+    }
+  }
+
+  .check-box__input:checked + .check-box__element {
+    background-color: $bg-color;
+    box-shadow: 0 0 3px 0 darken($bg-color, 7%);
+    border: none;
+
+    &:after {
+      opacity: 1;
+    }
+  }
+}

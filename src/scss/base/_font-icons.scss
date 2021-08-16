@@ -1,15 +1,13 @@
 @import '../variables/icons';
 
 @font-face {
-  font-family: '#{$icomoon-font-family}';
-  src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?g0cdxi');
-  src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?g0cdxi#iefix')
+  font-family: '#{$icon-font-family}';
+  src: url('#{$icon-font-path}/#{$icon-font-family}.eot?g0cdxi');
+  src: url('#{$icon-font-path}/#{$icon-font-family}.eot?g0cdxi#iefix')
       format('embedded-opentype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?g0cdxi')
-      format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?g0cdxi')
-      format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?g0cdxi##{$icomoon-font-family}')
+    url('#{$icon-font-path}/#{$icon-font-family}.ttf?g0cdxi') format('truetype'),
+    url('#{$icon-font-path}/#{$icon-font-family}.woff?g0cdxi') format('woff'),
+    url('#{$icon-font-path}/#{$icon-font-family}.svg?g0cdxi##{$icon-font-family}')
       format('svg');
   font-weight: normal;
   font-style: normal;
@@ -19,7 +17,7 @@
 [class^='icon-'],
 [class*=' icon-'] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: '#{$icomoon-font-family}' !important;
+  font-family: '#{$icon-font-family}' !important;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;

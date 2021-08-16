@@ -1,4 +1,8 @@
 .input {
   padding: 0 5px;
   position: relative;
+
+  &__label {
+    @include inline-block();
+  }
 }
