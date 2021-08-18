@@ -25,3 +25,11 @@
 
   @include checkbox-maker();
 }
+
+.check-box--secondary {
+  @include checkbox-maker($color-secondary, #fff);
+}
+
+.check-box--large {
+  @include checkbox-maker($color-primary-light-1, #fff, 24px);
+}

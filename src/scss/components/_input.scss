@@ -5,4 +5,8 @@
   &__label {
     @include inline-block();
   }
+
+  &__text {
+    @include inline-block();
+  }
 }
