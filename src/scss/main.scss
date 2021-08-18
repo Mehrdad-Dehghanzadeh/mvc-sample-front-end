@@ -1,21 +1,22 @@
 /**
  * Variables import
 ***********************************/
-@import 'variable/color';
-@import 'variable/around';
-@import 'variable/breakingPoint';
-@import 'variable/z-index';
-@import 'variable/icons';
+@import 'variables/color';
+@import 'variables/around';
+@import 'variables/breakingPoint';
+@import 'variables/z-index';
+@import 'variables/icons';
 
 /**
 * Mixin
 ***********************************/
-@import 'mixin/layout';
-@import 'mixin/common';
-@import 'mixin/text';
-@import 'mixin/spacing';
-@import 'mixin/btn';
-@import 'mixin/spacing';
+@import 'mixins/layout';
+@import 'mixins/common';
+@import 'mixins/text';
+@import 'mixins/spacing';
+@import 'mixins/btn';
+@import 'mixins/spacing';
+@import 'mixins/checkbox';
 
 /**
  * Base
@@ -25,6 +26,7 @@
 @import 'base/fonts';
 @import 'base/font-icons';
 @import 'base/typography';
+@import 'base/spacing';
 
 /**
 * Layout
@@ -42,6 +44,8 @@
 @import 'components/card';
 @import 'components/modal';
 @import 'components/btns';
+@import 'components/input';
+@import 'components/checkbox';
 
 /**
 * Pages

@@ -1,0 +1,35 @@
+.check-box {
+  display: inline-block;
+  position: relative;
+
+  &__input {
+    display: none;
+    position: absolute;
+    right: 999999px;
+  }
+
+  &__element {
+    cursor: pointer;
+    border: 1px solid #afafaf;
+    text-align: center;
+    transition: background-color ease 150ms;
+    @include inline-block(text-top);
+
+    &:after {
+      font-family: $icon-font-family;
+      content: $icon-check;
+      opacity: 0;
+      transition: opacity ease 150ms;
+    }
+  }
+
+  @include checkbox-maker();
+}
+
+.check-box--secondary {
+  @include checkbox-maker($color-secondary, #fff);
+}
+
+.check-box--large {
+  @include checkbox-maker($color-primary-light-1, #fff, 24px);
+}

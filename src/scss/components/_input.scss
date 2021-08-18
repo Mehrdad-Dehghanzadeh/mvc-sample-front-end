@@ -1,0 +1,12 @@
+.input {
+  padding: 0 5px;
+  position: relative;
+
+  &__label {
+    @include inline-block();
+  }
+
+  &__text {
+    @include inline-block();
+  }
+}
