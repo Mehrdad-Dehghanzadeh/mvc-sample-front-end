@@ -1,0 +1,7 @@
+.switch {
+  @include inline-block();
+
+  &__element {
+    display: none;
+  }
+}
