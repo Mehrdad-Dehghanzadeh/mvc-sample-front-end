@@ -10,8 +10,8 @@
     }
 
     &__handle {
-      width: $switch-height;
-      height: $switch-height;
+      width: $switch-height + 4px;
+      height: $switch-height + 4px;
       border-radius: $switch-height;
     }
 
@@ -21,7 +21,7 @@
 
         .switch__handle {
           background-color: $color;
-          left: 0;
+          transform: translateX(-($width - $switch-height));
         }
       }
     }

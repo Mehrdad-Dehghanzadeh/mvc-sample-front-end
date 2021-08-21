@@ -14,11 +14,15 @@
 
   &__handle {
     background-color: #5f6368;
-    position: absolute;
-    left: auto;
-    transition: left ease 200ms;
+    position: relative;
+    top: -2px;
+    transition: transform ease 200ms;
     @include inline-block(inital);
   }
 }
 
 @include switch-maker();
+
+.switch--secondary {
+  @include switch-maker($color-secondary);
+}
