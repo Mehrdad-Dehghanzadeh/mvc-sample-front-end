@@ -4,7 +4,7 @@
 let select2options = {
   width: '100%',
   dir: 'rtl',
-  dropdownParent: $('#layout'),
+  dropdownParent: $('body'),
   placeholder: 'انتخاب کنید ... ',
   language: {
     noResults: function (params) {
