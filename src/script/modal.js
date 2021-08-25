@@ -1,4 +1,4 @@
-const { merge } = require('./helper');
+const { merge } = require('./modules/_helper');
 
 (function ($) {
   var pluginName = 'modal';

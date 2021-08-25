@@ -82,7 +82,6 @@ let config = {
       'jquery-validation',
 
       // import scripts
-      'helper.js',
       'modal.js',
       'main.js'
     ],
