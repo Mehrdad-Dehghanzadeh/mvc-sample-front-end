@@ -219,7 +219,7 @@ module.exports = (env, { mode }) => {
     // config plugins for production mode
     config.plugins.push(
       new MiniCssExtractPlugin({
-        filename: 'css/main.min.css',
+        filename: 'css/[name].min.css',
       })
     );
 
