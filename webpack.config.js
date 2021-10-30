@@ -72,18 +72,17 @@ let config = {
   entry: {
     browser: 'browser.js',
 
-    bundle: [
-      // import main scss files
-      'select2/dist/css/select2.css',
-      './scss/main.scss',
+    // style files
+    style: [ 'select2/dist/css/select2.min.css', './scss/main.scss'],
 
+    bundle: [
       // import library js
       'select2',
       'jquery-validation',
 
       // import scripts
       'modal.js',
-      'main.js'
+      'main.js',
     ],
   },
 
