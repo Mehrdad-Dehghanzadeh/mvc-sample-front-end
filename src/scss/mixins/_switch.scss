@@ -1,0 +1,29 @@
+@use 'sass:math';
+
+@mixin switch-maker($color: $color-primary, $width: 45px) {
+  $switch-height: math.ceil($width * 0.45);
+  .switch {
+    &__track {
+      width: $width;
+      height: $switch-height;
+      border-radius: $switch-height;
+    }
+
+    &__handle {
+      width: $switch-height + 4px;
+      height: $switch-height + 4px;
+      border-radius: $switch-height;
+    }
+
+    &__input:checked {
+      + .switch__track {
+        background-color: lighten($color, 30%);
+
+        .switch__handle {
+          background-color: $color;
+          transform: translateX(-($width - $switch-height));
+        }
+      }
+    }
+  }
+}

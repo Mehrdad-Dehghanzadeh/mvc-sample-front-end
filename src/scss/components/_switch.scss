@@ -1,0 +1,28 @@
+.switch {
+  cursor: pointer;
+  @include inline-block();
+
+  &__input {
+    display: none;
+  }
+
+  &__track {
+    background-color: #d9dce0;
+    position: relative;
+    @include inline-block();
+  }
+
+  &__handle {
+    background-color: #5f6368;
+    position: relative;
+    top: -2px;
+    transition: transform ease 200ms;
+    @include inline-block(inital);
+  }
+}
+
+@include switch-maker();
+
+.switch--secondary {
+  @include switch-maker($color-secondary);
+}

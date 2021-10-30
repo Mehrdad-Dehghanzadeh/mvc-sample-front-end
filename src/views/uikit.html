@@ -29,309 +29,393 @@
   </head>
 
   <body>
+    <!-- Check Browsers Support -->
     <script
       type="text/javascript"
       src="scripts/browser.js"
       async="async"
     ></script>
+    <!-- Check Browsers Support -->
 
-    <!-- Header -->
+    <!-- Layout -->
+    <root class="layout" id="layout">
+      <!-- Header -->
+      <header class="header" id="header"></header>
+      <!-- End Header -->
 
-    <header class="header" id="header"></header>
+      <!-- Main -->
+      <main id="main">
+        <div class="uikit-page">
+          <div class="container">
+            <!-- Typography -->
+            <section>
+              <h2 class="heading-2 text-center">Typography</h2>
+              <div class="divider"></div>
+              <div class="row">
+                <div class="col-md-6 text-center">
+                  <h3 class="heading-1">heading-1</h3>
+                  <h3 class="heading-2">heading-2</h3>
+                  <h3 class="heading-3">heading-3</h3>
+                  <h3 class="heading-4">heading-4</h3>
+                  <h3 class="heading-5">heading-5</h3>
+                  <h3 class="heading-6">heading-6</h3>
+                </div>
 
-    <!-- End Header -->
+                <div class="col-md-6 text-center">
+                  <p class="subtitle-1">subtitle-1</p>
+                  <p class="subtitle-2">subtitle-2</p>
 
-    <!-- Main -->
-
-    <main id="main">
-      <div class="uikit-page">
-        <div class="container">
-          <!-- Typography -->
-          <section>
-            <h2 class="heading-2 text-center">Typography</h2>
-            <div class="divider"></div>
-            <div class="row">
-              <div class="col-md-6 text-center">
-                <h3 class="heading-1">heading-1</h3>
-                <h3 class="heading-2">heading-2</h3>
-                <h3 class="heading-3">heading-3</h3>
-                <h3 class="heading-4">heading-4</h3>
-                <h3 class="heading-5">heading-5</h3>
-                <h3 class="heading-6">heading-6</h3>
-              </div>
-
-              <div class="col-md-6 text-center">
-                <p class="subtitle-1">subtitle-1</p>
-                <p class="subtitle-2">subtitle-2</p>
-
-                <p class="body-1">body-1</p>
-                <p class="body-2">body-2</p>
-                <p class="caption">caption</p>
-                <p class="overline">overline</p>
-              </div>
-            </div>
-          </section>
-          <!-- Typography -->
-
-          <!-- Cards -->
-          <section class="mt-40">
-            <h2 class="heading-2 text-center">Card</h2>
-            <div class="divider"></div>
-            <div class="card-outline">card outline</div>
-            <div class="mt-20 card">card</div>
-          </section>
-          <!-- Cards -->
-
-          <!-- Colors -->
-          <section class="mt-40">
-            <h2 class="heading-2 text-center">colors</h2>
-            <div class="divider"></div>
-
-            <div class="row">
-              <div class="col-md-3">
-                <div class="color-item">
-                  <div
-                    class="color-item__sample"
-                    style="background-color: #21217c"
-                  ></div>
-                  <h3 class="heading-5">color-primary</h3>
-                  <p class="subtitle-1">#21217c</p>
+                  <p class="body-1">body-1</p>
+                  <p class="body-2">body-2</p>
+                  <p class="caption">caption</p>
+                  <p class="overline">overline</p>
                 </div>
               </div>
+            </section>
+            <!-- Typography -->
 
-              <div class="col-md-3">
-                <div class="color-item">
-                  <div
-                    class="color-item__sample"
-                    style="background-color: #2f2faf"
-                  ></div>
-                  <h3 class="heading-5">color-primary-light-1</h3>
-                  <p class="subtitle-1">#2f2faf</p>
+            <!-- Cards -->
+            <section class="mt-40">
+              <h2 class="heading-2 text-center">Card</h2>
+              <div class="divider"></div>
+              <div class="card-outline">card outline</div>
+              <div class="mt-20 card">card</div>
+            </section>
+            <!-- Cards -->
+
+            <!-- Colors -->
+            <section class="mt-40">
+              <h2 class="heading-2 text-center">colors</h2>
+              <div class="divider"></div>
+
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="color-item">
+                    <div
+                      class="color-item__sample"
+                      style="background-color: #21217c"
+                    ></div>
+                    <h3 class="heading-5">color-primary</h3>
+                    <p class="subtitle-1">#21217c</p>
+                  </div>
+                </div>
+
+                <div class="col-md-3">
+                  <div class="color-item">
+                    <div
+                      class="color-item__sample"
+                      style="background-color: #2f2faf"
+                    ></div>
+                    <h3 class="heading-5">color-primary-light-1</h3>
+                    <p class="subtitle-1">#2f2faf</p>
+                  </div>
+                </div>
+
+                <div class="col-md-3">
+                  <div class="color-item">
+                    <div
+                      class="color-item__sample"
+                      style="background-color: #3535c8"
+                    ></div>
+                    <h3 class="heading-5">color-primary-light-2</h3>
+                    <p class="subtitle-1">#3535c8</p>
+                  </div>
+                </div>
+
+                <div class="col-md-3">
+                  <div class="color-item">
+                    <div
+                      class="color-item__sample"
+                      style="background-color: #14144a"
+                    ></div>
+                    <h3 class="heading-5">color-primary-darken-1</h3>
+                    <p class="subtitle-1">#14144a</p>
+                  </div>
+                </div>
+
+                <div class="col-md-3">
+                  <div class="color-item">
+                    <div
+                      class="color-item__sample"
+                      style="background-color: #47e644"
+                    ></div>
+                    <h3 class="heading-5">color-secondary</h3>
+                    <p class="subtitle-1">#47e644</p>
+                  </div>
+                </div>
+
+                <div class="col-md-3">
+                  <div class="color-item">
+                    <div
+                      class="color-item__sample"
+                      style="background-color: #21dc1e"
+                    ></div>
+                    <h3 class="heading-5">color-secondary-light-1</h3>
+                    <p class="subtitle-1">#21dc1e</p>
+                  </div>
+                </div>
+
+                <div class="col-md-3">
+                  <div class="color-item">
+                    <div
+                      class="color-item__sample"
+                      style="background-color: #5be858"
+                    ></div>
+                    <h3 class="heading-5">color-secondary-light-2</h3>
+                    <p class="subtitle-1">#5be858</p>
+                  </div>
+                </div>
+
+                <div class="col-md-3">
+                  <div class="color-item">
+                    <div
+                      class="color-item__sample"
+                      style="background-color: #137b11"
+                    ></div>
+                    <h3 class="heading-5">color-secondary-darken-1</h3>
+                    <p class="subtitle-1">#137b11</p>
+                  </div>
+                </div>
+
+                <div class="col-md-3">
+                  <div class="color-item">
+                    <div
+                      class="color-item__sample"
+                      style="background-color: #0a4309"
+                    ></div>
+                    <h3 class="heading-5">color-secondary-darken-2</h3>
+                    <p class="subtitle-1">#0a4309</p>
+                  </div>
+                </div>
+
+                <div class="col-md-3">
+                  <div class="color-item">
+                    <div
+                      class="color-item__sample"
+                      style="background-color: #0d0d31"
+                    ></div>
+                    <h3 class="heading-5">color-primary-darken-2</h3>
+                    <p class="subtitle-1">#0d0d31</p>
+                  </div>
+                </div>
+
+                <div class="col-md-3">
+                  <div class="color-item">
+                    <div
+                      class="color-item__sample"
+                      style="background-color: #d3d3d3"
+                    ></div>
+                    <h3 class="heading-5">color-gray</h3>
+                    <p class="subtitle-1">d3d3d3#</p>
+                  </div>
+                </div>
+
+                <div class="col-md-3">
+                  <div class="color-item">
+                    <div
+                      class="color-item__sample"
+                      style="background-color: #ebebeb"
+                    ></div>
+                    <h3 class="heading-5">color-disable</h3>
+                    <p class="subtitle-1">ebebeb#</p>
+                  </div>
                 </div>
               </div>
+            </section>
+            <!-- Colors -->
 
-              <div class="col-md-3">
-                <div class="color-item">
-                  <div
-                    class="color-item__sample"
-                    style="background-color: #3535c8"
-                  ></div>
-                  <h3 class="heading-5">color-primary-light-2</h3>
-                  <p class="subtitle-1">#3535c8</p>
-                </div>
+            <!-- modal -->
+            <section class="mt-40">
+              <h2 class="heading-2 text-center">Modal</h2>
+              <div class="divider"></div>
+              <span class="trigger" data-trigger="modal" data-plugin_modal="{}">
+                modal
+              </span>
+
+              <span
+                class="trigger"
+                data-trigger="modal-2"
+                data-plugin_modal='{"title": "modal 2", "size": "lg"}'
+              >
+                modal-2
+              </span>
+            </section>
+            <!-- modal -->
+
+            <!-- Buttons -->
+            <section class="mt-40">
+              <h2 class="heading-2 text-center">Buttons</h2>
+              <div class="divider"></div>
+              <button class="btn btn-primary">
+                <i class="icon-plus"></i>
+                <span class="btn__text">button</span>
+              </button>
+
+              <button class="btn btn--sm btn-primary">
+                <span class="btn__text">button</span>
+              </button>
+
+              <button class="btn btn-outline-primary">
+                <i class="icon-airplay"></i>
+                <span class="btn__text">button</span>
+              </button>
+
+              <button class="btn btn--lg btn-outline-secondary">
+                <i class="icon-airplay"></i>
+                <span class="btn__text">button</span>
+              </button>
+
+              <button class="btn btn--xs btn-secondary">
+                <span class="btn__text">button</span>
+              </button>
+            </section>
+            <!-- Buttons -->
+
+            <!-- Checkboxes -->
+            <section class="mt-40">
+              <h2 class="heading-2 text-center">checkboxes</h2>
+              <div class="divider"></div>
+
+              <div class="input">
+                <label class="input__label" for="check-box-1">
+                  <span class="input__text"> checkbox-1 </span>
+
+                  <span class="check-box">
+                    <input
+                      class="check-box__input"
+                      type="checkbox"
+                      id="check-box-1"
+                    />
+                    <span class="check-box__element"></span>
+                  </span>
+                </label>
               </div>
 
-              <div class="col-md-3">
-                <div class="color-item">
-                  <div
-                    class="color-item__sample"
-                    style="background-color: #14144a"
-                  ></div>
-                  <h3 class="heading-5">color-primary-darken-1</h3>
-                  <p class="subtitle-1">#14144a</p>
-                </div>
+              <div class="input">
+                <label class="input__label" for="check-box-2">
+                  <span class="input__text"> checkbox-secondary </span>
+
+                  <span class="check-box check-box--secondary">
+                    <input
+                      class="check-box__input"
+                      type="checkbox"
+                      id="check-box-2"
+                    />
+                    <span class="check-box__element"></span>
+                  </span>
+                </label>
               </div>
 
-              <div class="col-md-3">
-                <div class="color-item">
-                  <div
-                    class="color-item__sample"
-                    style="background-color: #47e644"
-                  ></div>
-                  <h3 class="heading-5">color-secondary</h3>
-                  <p class="subtitle-1">#47e644</p>
-                </div>
+              <div class="input">
+                <label class="input__label" for="check-box-3">
+                  <span class="input__text"> Checkbox-large </span>
+
+                  <span class="check-box check-box--large">
+                    <input
+                      class="check-box__input"
+                      type="checkbox"
+                      id="check-box-3"
+                    />
+                    <span class="check-box__element"></span>
+                  </span>
+                </label>
+              </div>
+            </section>
+            <!-- Checkboxes -->
+
+            <!-- Switches -->
+            <section class="mt-40">
+              <h2 class="heading-2 text-center">Switches</h2>
+              <div class="divider"></div>
+
+              <div class="input">
+                <label class="input__label" for="switch-1">
+                  <span class="input__text">switch</span>
+                  <span class="switch">
+                    <input
+                      type="checkbox"
+                      class="switch__input"
+                      id="switch-1"
+                    />
+                    <span class="switch__track">
+                      <span class="switch__handle"></span>
+                    </span>
+                  </span>
+                </label>
               </div>
 
-              <div class="col-md-3">
-                <div class="color-item">
-                  <div
-                    class="color-item__sample"
-                    style="background-color: #21dc1e"
-                  ></div>
-                  <h3 class="heading-5">color-secondary-light-1</h3>
-                  <p class="subtitle-1">#21dc1e</p>
+              <div class="input">
+                <label class="input__label" for="switch-2">
+                  <span class="input__text">switch--secondary</span>
+                  <span class="switch switch--secondary">
+                    <input
+                      type="checkbox"
+                      class="switch__input"
+                      id="switch-2"
+                    />
+                    <span class="switch__track">
+                      <span class="switch__handle"></span>
+                    </span>
+                  </span>
+                </label>
+              </div>
+            </section>
+            <!-- Switches -->
+
+            <!-- Selects -->
+            <section class="mt-40">
+              <h2 class="heading-2 text-center">Selects</h2>
+              <div class="divider"></div>
+
+              <div class="row">
+                <div class="col-6 col-lg-4">
+                  <div class="input">
+                    <label class="input__label" id="select-1">
+                      <span class="input__text">select-1 no search</span>
+                    </label>
+                    <select
+                      type="text"
+                      class="no-search"
+                      placeholder="لطفا انتخاب کنید..."
+                    >
+                      <option></option>
+                      <option value="one">one</option>
+                      <option value="two">two</option>
+                      <option value="three">three</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-6 col-lg-4">
+                  <div class="input">
+                    <label class="input__label" id="select-2">
+                      <span class="input__text">select-2 has clear </span>
+                    </label>
+                    <select
+                      class="has-clear"
+                      type="text"
+                      placeholder="لطفا انتخاب کنید..."
+                    >
+                      <option value="one">one</option>
+                      <option value="two">two</option>
+                      <option value="three">three</option>
+                    </select>
+                  </div>
                 </div>
               </div>
-
-              <div class="col-md-3">
-                <div class="color-item">
-                  <div
-                    class="color-item__sample"
-                    style="background-color: #5be858"
-                  ></div>
-                  <h3 class="heading-5">color-secondary-light-2</h3>
-                  <p class="subtitle-1">#5be858</p>
-                </div>
-              </div>
-
-              <div class="col-md-3">
-                <div class="color-item">
-                  <div
-                    class="color-item__sample"
-                    style="background-color: #137b11"
-                  ></div>
-                  <h3 class="heading-5">color-secondary-darken-1</h3>
-                  <p class="subtitle-1">#137b11</p>
-                </div>
-              </div>
-
-              <div class="col-md-3">
-                <div class="color-item">
-                  <div
-                    class="color-item__sample"
-                    style="background-color: #0a4309"
-                  ></div>
-                  <h3 class="heading-5">color-secondary-darken-2</h3>
-                  <p class="subtitle-1">#0a4309</p>
-                </div>
-              </div>
-
-              <div class="col-md-3">
-                <div class="color-item">
-                  <div
-                    class="color-item__sample"
-                    style="background-color: #0d0d31"
-                  ></div>
-                  <h3 class="heading-5">color-primary-darken-2</h3>
-                  <p class="subtitle-1">#0d0d31</p>
-                </div>
-              </div>
-
-              <div class="col-md-3">
-                <div class="color-item">
-                  <div
-                    class="color-item__sample"
-                    style="background-color: #d3d3d3"
-                  ></div>
-                  <h3 class="heading-5">color-gray</h3>
-                  <p class="subtitle-1">d3d3d3#</p>
-                </div>
-              </div>
-
-              <div class="col-md-3">
-                <div class="color-item">
-                  <div
-                    class="color-item__sample"
-                    style="background-color: #ebebeb"
-                  ></div>
-                  <h3 class="heading-5">color-disable</h3>
-                  <p class="subtitle-1">ebebeb#</p>
-                </div>
-              </div>
-            </div>
-          </section>
-          <!-- Colors -->
-
-          <!-- modal -->
-          <section class="mt-40">
-            <h2 class="heading-2 text-center">Modal</h2>
-            <div class="divider"></div>
-            <span class="trigger" data-trigger="modal" data-plugin_modal="{}">
-              modal
-            </span>
-
-            <span
-              class="trigger"
-              data-trigger="modal-2"
-              data-plugin_modal='{"title": "modal 2", "size": "lg"}'
-            >
-              modal-2
-            </span>
-          </section>
-          <!-- modal -->
-
-          <!-- Buttons -->
-          <section class="mt-40">
-            <h2 class="heading-2 text-center">Buttons</h2>
-            <div class="divider"></div>
-            <button class="btn btn-primary">
-              <i class="icon-plus"></i>
-              <span class="btn__text">button</span>
-            </button>
-
-            <button class="btn btn--sm btn-primary">
-              <span class="btn__text">button</span>
-            </button>
-
-            <button class="btn btn-outline-primary">
-              <i class="icon-airplay"></i>
-              <span class="btn__text">button</span>
-            </button>
-
-            <button class="btn btn--lg btn-outline-secondary">
-              <i class="icon-airplay"></i>
-              <span class="btn__text">button</span>
-            </button>
-
-            <button class="btn btn--xs btn-secondary">
-              <span class="btn__text">button</span>
-            </button>
-          </section>
-          <!-- Buttons -->
-
-          <!-- Checkboxes -->
-          <section class="mt-40">
-            <h2 class="heading-2 text-center">checkboxes</h2>
-            <div class="divider"></div>
-
-            <div class="input">
-              <label class="input__label" for="check-box-1">
-                <span class="input__text"> checkbox-1 </span>
-
-                <span class="check-box">
-                  <input
-                    class="check-box__input"
-                    type="checkbox"
-                    id="check-box-1"
-                  />
-                  <span class="check-box__element"></span>
-                </span>
-              </label>
-            </div>
-
-            <div class="input">
-              <label class="input__label" for="check-box-2">
-                <span class="input__text"> checkbox-secondary </span>
-
-                <span class="check-box check-box--secondary">
-                  <input
-                    class="check-box__input"
-                    type="checkbox"
-                    id="check-box-2"
-                  />
-                  <span class="check-box__element"></span>
-                </span>
-              </label>
-            </div>
-
-            <div class="input">
-              <label class="input__label" for="check-box-3">
-                <span class="input__text"> checkbox-large </span>
-
-                <span class="check-box check-box--large">
-                  <input
-                    class="check-box__input"
-                    type="checkbox"
-                    id="check-box-3"
-                  />
-                  <span class="check-box__element"></span>
-                </span>
-              </label>
-            </div>
-          </section>
-          <!-- Checkboxes -->
+            </section>
+            <!-- Selects -->
+          </div>
         </div>
-      </div>
-    </main>
+      </main>
+      <!-- End Main -->
 
-    <!-- End Main -->
+      <!-- Footer -->
+      <footer class="footer" id="footer"></footer>
+      <!-- End Footer -->
+    </root>
+    <!-- End Layout -->
 
-    <!-- Footer -->
-
-    <footer class="footer" id="footer"></footer>
-
-    <!-- End Footer -->
     <div class="modal" id="modal">
       <!--modal content -->
       <span></span>
