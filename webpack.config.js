@@ -72,10 +72,9 @@ let config = {
   entry: {
     browser: 'browser.js',
 
-    // style files
-    style: [ 'select2/dist/css/select2.min.css', './scss/main.scss'],
-
     bundle: [
+      // style files
+      './scss/main.scss',
       // import library js
       'select2',
       'jquery-validation',
@@ -218,7 +217,7 @@ module.exports = (env, { mode }) => {
     // config plugins for production mode
     config.plugins.push(
       new MiniCssExtractPlugin({
-        filename: 'css/[name].min.css',
+        filename: 'css/main.min.css',
       })
     );
 
