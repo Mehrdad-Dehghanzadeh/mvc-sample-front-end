@@ -99,3 +99,5 @@ dist
 #editors 
 .idea
 .vscode
+package-lock.json
+.analyze

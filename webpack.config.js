@@ -7,8 +7,8 @@ const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const copyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const Chalk = require('chalk');
-const PrettierPlugin = require('prettier-webpack-plugin');
-
+const BundleAnalyzerPlugin =
+  require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 // get all html file in __Dir
@@ -57,8 +57,6 @@ html.readDir();
 let config = {
   // source directories
   context: path.resolve(__dirname, 'src'),
-
-  target: ['web', 'browserslist'],
 
   // webpack resolve modules
   resolve: {
@@ -110,8 +108,6 @@ let config = {
       jQuery: 'jquery',
       'window.jQuery': 'jquery',
     }),
-
-    new PrettierPlugin(),
 
     new ProgressBarPlugin({
       format:
@@ -186,6 +182,7 @@ module.exports = (env, { mode }) => {
   if (mode === 'development') {
     // progersive bar minial for development mode
     config.stats = 'minimal';
+    config.target = 'web';
 
     // config loaders for development mode
     config.module.rules.push(
@@ -199,27 +196,43 @@ module.exports = (env, { mode }) => {
 
     //config dev server for development mode
     config.devServer = {
-      contentBase: path.resolve(__dirname, 'dist'),
+      static: {
+        directory: path.resolve(__dirname, 'dist'),
+        watch: true,
+      },
       port: 9090,
       open: true,
-      hot: true,
-      index: 'index.html',
-      watchContentBase: true,
+      hot: false,
       headers: {
         'Access-Control-Allow-Origin': '*',
-        https: true,
       },
     };
   }
 
   // config for production mode
   if (mode === 'production') {
+    config.target = 'browserslist';
+
     // config plugins for production mode
     config.plugins.push(
-      new MiniCssExtractPlugin({
-        filename: 'css/main.min.css',
-      })
+      ...[
+        new MiniCssExtractPlugin({
+          filename: 'css/main.min.css',
+        }),
+
+        !!env.ANALYZE
+          ? new BundleAnalyzerPlugin({
+              openAnalyzer: !!env.ANALYZE,
+              analyzerMode: 'static',
+              generateStatsFile: true,
+              statsFilename: '../.analyze/stats.json',
+              reportFilename: '../.analyze/report.html',
+            })
+          : () => {},
+      ]
     );
+
+    config.plugins.push;
 
     //config fonts loaders for productions mode
     config.module.rules[0].options.publicPath = '../fonts';
