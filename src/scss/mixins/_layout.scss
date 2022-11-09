@@ -37,9 +37,6 @@
 **************************************/
 @mixin make-container($max-width: 100%) {
   max-width: $max-width;
-  min-height: $container-min-height;
-  padding-top: $container-padding-top;
-  padding-bottom: $container-padding-bottom;
   margin-right: auto;
   margin-left: auto;
 }

@@ -4,32 +4,42 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>صفحه اصلی</title>
   <%= htmlWebpackPlugin.tags.headTags %>
+    <title>base</title>
 </head>
 
 <body>
-  <!-- Header -->
+  <!-- Check Browsers Support -->
+  <script type="text/javascript" src="scripts/browser.js" async="async"></script>
+  <!-- Check Browsers Support -->
 
-  <header class="header" id="header"></header>
+  <!-- Layout -->
+  <root class="layout" id="#layout">
+    <!-- Header -->
+    <header class="header" id="header"></header>
+    <!-- End Header -->
 
-  <!-- End Header -->
+    <!-- Main -->
+    <main id="main">
+      <div class="container">
+        <div class="row">
+          <div class="col-xxl-3"></div>
+          <div class="col-xxl-3"></div>
+          <div class="col-xxl-3"></div>
+        </div>
+      </div>
+    </main>
+    <!-- End Main -->
 
-  <!-- Main -->
+    <!-- Footer -->
+    <footer class="footer" id="footer"></footer>
+    <!-- End Footer -->
+  </root>
+  <!-- End Layout -->
 
-  <main id="main">
-    <div class="layout">
-    </div>
-  </main>
-
-  <!-- End Main -->
-
-  <!-- Footer -->
-
-  <footer class="footer" id="footer"></footer>
-
-  <!-- End Footer -->
-
+  <div class="modal">
+    <div class="modal__container"></div>
+  </div>
   <!-- Scripts -->
   <%= htmlWebpackPlugin.tags.bodyTags %>
 
