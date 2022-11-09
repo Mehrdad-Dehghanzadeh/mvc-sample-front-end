@@ -1,0 +1,20 @@
+.header {
+  @include back-ground-dark;
+  min-height: 50px;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#main {
+  flex: 1 0 auto;
+}
+
+#footer {
+  @include back-ground-dark;
+  min-height: 300px;
+  margin-top: 20px;
+}
