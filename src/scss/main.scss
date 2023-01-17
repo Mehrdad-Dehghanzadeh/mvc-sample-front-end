@@ -1,56 +1,6 @@
-/**
- * Variables import
-***********************************/
-@import 'variables/color';
-@import 'variables/around';
-@import 'variables/breakingPoint';
-@import 'variables/z-index';
-@import 'variables/icons';
-
-/**
-* Mixin
-***********************************/
-@import 'mixins/layout';
-@import 'mixins/common';
-@import 'mixins/text';
-@import 'mixins/spacing';
-@import 'mixins/btn';
-@import 'mixins/spacing';
-@import 'mixins/checkbox';
-@import 'mixins/switch';
-
-/**
- * Base
-***********************************/
-@import 'base/reset';
-@import 'base/base';
-@import 'base/fonts';
-@import 'base/font-icons';
-@import 'base/typography';
-@import 'base/spacing';
-
-/**
-* Layout
-***********************************/
-@import 'layout/container';
-@import 'layout/grid';
-@import 'layout/flex';
-@import 'layout/main-layout';
-
-/**
-* Components
-************************************/
-@import 'components/divider';
-@import 'components/card';
-@import 'components/modal';
-@import 'components/btns';
-@import 'components/input';
-@import 'components/checkbox';
-@import 'components/switch';
-@import 'components/select';
-
-/**
-* Pages
-***********************************/
-@import 'pages/index';
-@import 'pages/panel';
+@import 'variables';
+@import "mixins";
+@import 'base';
+@import 'layout';
+@import 'components';
+@import 'pages';
