@@ -101,3 +101,4 @@ dist
 .vscode
 package-lock.json
 .analyze
+.fleet
