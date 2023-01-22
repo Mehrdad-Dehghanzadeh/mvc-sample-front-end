@@ -57,6 +57,7 @@ html.readDir();
 let config = {
   // source directories
   context: path.resolve(__dirname, 'src'),
+  target: 'browserslist',
 
   // webpack resolve modules
   resolve: {
@@ -182,14 +183,27 @@ module.exports = (env, { mode }) => {
   if (mode === 'development') {
     // progersive bar minial for development mode
     config.stats = 'minimal';
-    config.target = 'web';
 
     // config loaders for development mode
     config.module.rules.push(
       ...[
         {
           test: /\.(c|sa|sc)ss$/i,
-          use: ['style-loader', 'css-loader', 'sass-loader'],
+          use: [
+            'style-loader',
+            'css-loader',
+            
+            {
+              loader: 'postcss-loader',
+              options: {
+                postcssOptions: {
+                  config: path.relative(__dirname, 'postcss.config.js'),
+                },
+              },
+            },
+
+            'sass-loader',
+          ],
         },
       ]
     );
@@ -211,8 +225,6 @@ module.exports = (env, { mode }) => {
 
   // config for production mode
   if (mode === 'production') {
-    config.target = 'browserslist';
-
     // config plugins for production mode
     config.plugins.push(
       ...[
