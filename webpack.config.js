@@ -192,7 +192,7 @@ module.exports = (env, { mode }) => {
           use: [
             'style-loader',
             'css-loader',
-            
+
             {
               loader: 'postcss-loader',
               options: {
@@ -225,27 +225,6 @@ module.exports = (env, { mode }) => {
 
   // config for production mode
   if (mode === 'production') {
-    // config plugins for production mode
-    config.plugins.push(
-      ...[
-        new MiniCssExtractPlugin({
-          filename: 'css/main.min.css',
-        }),
-
-        !!env.ANALYZE
-          ? new BundleAnalyzerPlugin({
-              openAnalyzer: !!env.ANALYZE,
-              analyzerMode: 'static',
-              generateStatsFile: true,
-              statsFilename: '../.analyze/stats.json',
-              reportFilename: '../.analyze/report.html',
-            })
-          : () => {},
-      ]
-    );
-
-    config.plugins.push;
-
     //config fonts loaders for productions mode
     config.module.rules[0].options.publicPath = '../fonts';
 
@@ -266,6 +245,25 @@ module.exports = (env, { mode }) => {
         'sass-loader',
       ],
     });
+
+    // config plugins for production mode
+    config.plugins.push(
+      ...[
+        new MiniCssExtractPlugin({
+          filename: 'css/main.min.css',
+        }),
+
+        !!env.ANALYZE
+          ? new BundleAnalyzerPlugin({
+              openAnalyzer: !!env.ANALYZE,
+              analyzerMode: 'static',
+              generateStatsFile: true,
+              statsFilename: '../.analyze/stats.json',
+              reportFilename: '../.analyze/report.html',
+            })
+          : () => {},
+      ]
+    );
 
     config.stats = {
       assets: true,
