@@ -4,7 +4,7 @@
   "description": "todo front end",
   "main": "dist/srcipts/bundle.js",
   "scripts": {
-    "serve": "webpack serve --mode development",
+    "serve": "webpack serve --mode=development",
     "build": "webpack --mode=production",
     "analyze": "webpack --mode=production --env ANALYZE"
   },
@@ -35,9 +35,10 @@
     "mini-css-extract-plugin": "^2.6.0",
     "postcss": "^8.4.18",
     "postcss-loader": "^4.3.0",
+    "postcss-rtlcss": "^4.0.1",
     "progress-bar-webpack-plugin": "^2.1.0",
     "sass": "^1.56.1",
-    "sass-loader": "^10.2.1",
+    "sass-loader": "^10.4.1",
     "style-loader": "^2.0.0",
     "webpack": "^5.75.0",
     "webpack-bundle-analyzer": "^4.7.0",
@@ -46,13 +47,21 @@
     "webpack-merge-and-include-globally": "^2.3.4"
   },
   "dependencies": {
+    "@popperjs/core": "^2.11.6",
+    "bootstrap": "^5.2.3",
     "jquery": "^3.6.0",
     "jquery-validation": "^1.19.4",
     "select2": "^4.1.0-rc.0"
   },
   "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "IE 11"
+    ">= 0.5%",
+    "last 2 major versions",
+    "not dead",
+    "Chrome >= 60",
+    "Firefox >= 60",
+    "Firefox ESR",
+    "iOS >= 12",
+    "Safari >= 12",
+    "not Explorer <= 11"
   ]
 }
