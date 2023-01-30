@@ -192,7 +192,6 @@ module.exports = (env, { mode }) => {
           use: [
             'style-loader',
             'css-loader',
-
             {
               loader: 'postcss-loader',
               options: {
