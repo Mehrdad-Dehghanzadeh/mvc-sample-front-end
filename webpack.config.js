@@ -10,6 +10,7 @@ const Chalk = require('chalk');
 const BundleAnalyzerPlugin =
   require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 // get all html file in __Dir
 const html = {
@@ -170,6 +171,8 @@ let config = {
       chunks: 'all',
       name: 'vendor',
     },
+
+    minimizer: [new CssMinimizerPlugin()],
   },
 
   //End webpack plugin config for all mode
