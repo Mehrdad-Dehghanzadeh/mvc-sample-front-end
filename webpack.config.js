@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
+const TerserPlugin = require('terser-webpack-plugin');
 const Webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
@@ -171,7 +172,7 @@ let config = {
       chunks: 'all',
       name: 'vendor',
     },
-
+    minimize: true,
     minimizer: [new CssMinimizerPlugin()],
   },
 
@@ -186,6 +187,7 @@ module.exports = (env, { mode }) => {
   if (mode === 'development') {
     // progersive bar minial for development mode
     config.stats = 'minimal';
+    config.devtool = 'source-map';
 
     // config loaders for development mode
     config.module.rules.push(
@@ -227,6 +229,8 @@ module.exports = (env, { mode }) => {
 
   // config for production mode
   if (mode === 'production') {
+    config.optimization.minimizer.push(new TerserPlugin());
+
     //config fonts loaders for productions mode
     config.module.rules[0].options.publicPath = '../fonts';
 
