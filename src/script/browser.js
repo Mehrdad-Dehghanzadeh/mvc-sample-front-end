@@ -12,11 +12,11 @@ function merge(source, properties) {
   // Defaults options
   var defaults = {
     IE: 11,
-    Safari: 6.1,
-    Firefox: 28,
-    Chrome: 28,
-    Opera: 12.1,
-  };
+    Safari: 12.1,
+    Firefox: 60,
+    Chrome: 60,
+    Opera: 64,
+  }
 
   function CheckBrowser(path, setting) {
     // Define Options For Plugin
