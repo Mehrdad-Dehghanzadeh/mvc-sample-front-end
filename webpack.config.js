@@ -176,6 +176,10 @@ let config = {
     minimizer: [new CssMinimizerPlugin()],
   },
 
+  experiments: {
+    topLevelAwait: true,
+  },
+
   //End webpack plugin config for all mode
 };
 
