@@ -12,6 +12,7 @@ const BundleAnalyzerPlugin =
   require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
 
 // get all html file in __Dir
 const html = {
@@ -263,7 +264,7 @@ module.exports = (env, { mode }) => {
           filename: 'css/main.min.css',
         }),
 
-        !!env.ANALYZE
+        env.ANALYZE
           ? new BundleAnalyzerPlugin({
               openAnalyzer: !!env.ANALYZE,
               analyzerMode: 'static',
@@ -272,6 +273,8 @@ module.exports = (env, { mode }) => {
               reportFilename: '../.analyze/report.html',
             })
           : () => {},
+
+        env.compress ? new CompressionPlugin() : () => {},
       ]
     );
 
