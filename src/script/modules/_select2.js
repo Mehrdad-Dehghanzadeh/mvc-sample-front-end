@@ -1,5 +1,5 @@
 export default () => {
-  $('select').each(function () {
+  $('select.select2').each(function () {
     let select2options = {
       width: '100%',
       dir: 'rtl',

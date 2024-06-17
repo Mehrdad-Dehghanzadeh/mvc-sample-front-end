@@ -84,6 +84,7 @@ let config = {
       // import scripts
       'modal.js',
       'main.js',
+      'select.js'
     ],
   },
 

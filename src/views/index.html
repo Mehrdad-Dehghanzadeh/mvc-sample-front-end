@@ -1,53 +1,82 @@
 <!DOCTYPE html>
 <html dir="rtl" lang="fa">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <%= htmlWebpackPlugin.tags.headTags %>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <%= htmlWebpackPlugin.tags.headTags %>
     <title>base</title>
-</head>
+  </head>
 
-<body>
-  <!-- Check Browsers Support -->
-  <script type="text/javascript" src="scripts/browser.js" async="async"></script>
-  <!-- Check Browsers Support -->
+  <body>
+    <!-- Check Browsers Support -->
+    <script
+      type="text/javascript"
+      src="scripts/browser.js"
+      async="async"
+    ></script>
+    <!-- Check Browsers Support -->
 
-  <!-- Layout -->
-  <root class="layout" id="#layout">
-    <!-- Header -->
-    <header class="header" id="header"></header>
-    <!-- End Header -->
+    <!-- Layout -->
+    <root class="layout" id="#layout">
+      <!-- Header -->
+      <header class="header" id="header"></header>
+      <!-- End Header -->
 
-    <!-- Main -->
-    <main id="main">
-      <div class="container">
-        <div class="row">
-          <div class="col-xxl-3"></div>
-          <div class="col-xxl-3"></div>
-          <div class="col-xxl-3"></div>
+      <!-- Main -->
+      <main id="main">
+        <div class="container">
+          <form>
+            <div class="row">
+              <div class="col-xxl-3">
+                <select
+                  name="select-1"
+                  class="w-100 1"
+                  data-plugin_select-bar='{"label": "انتخاب کردن"}'
+                >
+                  <option></option>
+                  <option value="md">md</option>
+                </select>
+              </div>
+              <div class="col-xxl-3">
+                <select
+                  id="select-2"
+                  name="select-2"
+                  class="w-100 2"
+                  data-plugin_select-bar='{"label": "انتخاب 2"}'
+                >
+                  <option value="2-1">1</option>
+                  <option value="2-2" selected>2</option>
+                </select>
+              </div>
+              <div class="col-xxl-3"></div>
+            </div>
+
+            <button type="submit">asda</button>
+          </form>
         </div>
-      </div>
-    </main>
-    <!-- End Main -->
+      </main>
+      <!-- End Main -->
 
-    <!-- Footer -->
-    <footer class="footer" id="footer"></footer>
-    <!-- End Footer -->
-  </root>
-  <!-- End Layout -->
+      <!-- Footer -->
+      <footer class="footer" id="footer"></footer>
+      <!-- End Footer -->
+    </root>
+    <!-- End Layout -->
 
-  <div class="modal">
-    <div class="modal__container"></div>
-  </div>
-  <!-- Scripts -->
-  <%= htmlWebpackPlugin.tags.bodyTags %>
+    <div class="modal">
+      <div class="modal__container"></div>
+    </div>
+    <!-- Scripts -->
+    <%= htmlWebpackPlugin.tags.bodyTags %>
 
     <script type="text/javascript">
-      $(function () { });
+      $(function () {
+        $('#select-2').change(function () {
+          console.log('change-2');
+        });
+      });
     </script>
 
     <!-- END Scripts -->
-</body>
-
+  </body>
 </html>
