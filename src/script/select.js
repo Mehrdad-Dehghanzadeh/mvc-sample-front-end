@@ -84,8 +84,9 @@
 
   function _attachEvents(that) {
     that.wrapper.children('.select-field__fieldset').click(function (event) {
+      $('body').off('click');
       event.preventDefault();
-      $(that.wrapper).addClass('select-field--active');
+      $(that.wrapper).toggleClass('select-field--active');
 
       setTimeout(() => {
         $('body').on('click', function () {

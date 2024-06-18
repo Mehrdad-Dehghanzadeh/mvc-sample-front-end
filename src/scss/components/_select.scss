@@ -78,7 +78,7 @@
 .select-field--active .select-field__fieldset:after {
   border-left-color: var(--color-primary);
   border-bottom-color: var(--color-primary);
-  transform: rotateZ(135deg);
+  transform: rotateZ(135deg) translatex(4px);
 }
 
 .select-field__fieldset:hover,
@@ -126,6 +126,11 @@
 
 .select-field__list-item {
   padding: 4px 8px;
+  opacity: 0;
+}
+
+.select-field--active .select-field__list-item {
+  opacity: 1;
 }
 
 .select-field__list-item-empty {
