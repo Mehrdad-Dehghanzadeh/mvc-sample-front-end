@@ -1,1 +1,128 @@
-@import 'select2/dist/css/select2.min.css';
+
+.select-field {
+  min-height: var(--size-control-height);
+  position: relative;
+  cursor: pointer;
+}
+
+.select-field__legend {
+  border: none;
+  background-color: transparent;
+  padding: 0 8px;
+  position: absolute;
+  top: 1.8em;
+  right: 12px;
+  width: auto;
+  margin: 0;
+  float: none;
+  font-size: $font-size-xs;
+  line-height: 1;
+  pointer-events: none;
+  transition: all ease 150ms;
+}
+
+.select-field__fieldset {
+  display: flex;
+  align-items: center;
+  border: 1px solid $color-gray-2;
+  border-radius: var(--size-control-radius);
+  min-height: var(--size-control-height);
+  max-height: var(--size-control-max-height);
+  background-color: transparent;
+  width: 100%;
+  height: auto;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.select-field__fieldset:after {
+  content: '';
+  border-left: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  left: 24px;
+  border-radius: 2px;
+  transform: rotateZ(-45deg);
+  transition: transform 250ms;
+  transform-origin: bottom;
+}
+
+.select-field__fieldset:hover:after {
+  border-left-color: $color-primary;
+  border-bottom-color: $color-primary;
+}
+
+.select-field--active .select-field__fieldset:after {
+  border-left-color: $color-primary;
+  border-bottom-color: $color-primary;
+  transform: rotateZ(135deg) translatex(4px);
+}
+
+.select-field__fieldset:hover,
+.select-field--active > .select-field__fieldset {
+  border-color: $color-primary;
+  box-shadow: 0 0 8px 0 $color-primary-light-1;
+}
+
+.select-field--has-value .select-field__legend,
+.select-field--active .select-field__legend {
+  top: -0.5em;
+  right: 20px;
+  transform: initial;
+  background-color: $color-bg;
+}
+
+.select-field__fieldset:hover > .select-field__legend,
+.select-field--active .select-field__legend {
+  color: $color-primary;
+}
+
+.select-field__option {
+  background-color: $color-bg;
+  min-height: 48px;
+}
+
+.select-field__list {
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 0 6px 0 $color-gray-3;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 0;
+  max-height: 0;
+  transition: height, max-height ease 450ms;
+  margin: 4px auto;
+  position: absolute;
+  z-index: $select-index;
+}
+
+.select-field--active .select-field__list {
+  margin: 4px auto 12px;
+  padding: 8px 4px;
+  height: auto;
+  max-height: 500px;
+}
+
+.select-field__list-item {
+  padding: 4px 8px;
+  opacity: 0;
+}
+
+.select-field--active .select-field__list-item {
+  opacity: 1;
+}
+
+.select-field__list-item-empty {
+  text-align: center;
+  color: $color-error;
+}
+
+.select-field__list-item:not(:last-child) {
+  border-bottom: 1px solid $color-gray-1;
+}
+
+select[data-plugin_select-bar] {
+  display: none !important;
+}
