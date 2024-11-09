@@ -9,15 +9,15 @@
 
 .divider {
   @extend %divider-abstract;
-  border-bottom: 1px solid $color-gray;
+  border-bottom: 1px solid $color-gray-1;
 }
 
 .divider-dashed {
   @extend %divider-abstract;
-  border-bottom: 2px dashed $color-gray;
+  border-bottom: 2px dashed $color-gray-1;
 }
 
 .divider-dotted {
   @extend %divider-abstract;
-  border-bottom: 2px dotted $color-gray;
+  border-bottom: 2px dotted $color-gray-1;
 }
