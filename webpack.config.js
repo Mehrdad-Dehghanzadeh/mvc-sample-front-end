@@ -73,6 +73,7 @@ let config = {
 
   entry: {
     browser: 'browser.js',
+    'client-detection': "client-detection.js",
 
     bundle: [
       // style files
