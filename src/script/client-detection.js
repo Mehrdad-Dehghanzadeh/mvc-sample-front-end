@@ -215,32 +215,32 @@ function clientDetection(setDataCallBack) {
   }
 }
 
-function alertData(jscd) {
-  alert(
-    'OS: ' +
-      jscd.os +
-      ' ' +
-      jscd.osVersion +
-      '\n' +
-      'Browser: ' +
-      jscd.browser +
-      ' ' +
-      jscd.browserMajorVersion +
-      ' (' +
-      jscd.browserVersion +
-      ')\n' +
-      'Mobile: ' +
-      jscd.mobile +
-      '\n' +
-      'Cookies: ' +
-      jscd.cookies +
-      '\n' +
-      'Screen Size: ' +
-      jscd.screen +
-      '\n\n' +
-      'Full User Agent: ' +
-      navigator.userAgent
-  );
-}
+// function alertData(jscd) {
+//   alert(
+//     'OS: ' +
+//       jscd.os +
+//       ' ' +
+//       jscd.osVersion +
+//       '\n' +
+//       'Browser: ' +
+//       jscd.browser +
+//       ' ' +
+//       jscd.browserMajorVersion +
+//       ' (' +
+//       jscd.browserVersion +
+//       ')\n' +
+//       'Mobile: ' +
+//       jscd.mobile +
+//       '\n' +
+//       'Cookies: ' +
+//       jscd.cookies +
+//       '\n' +
+//       'Screen Size: ' +
+//       jscd.screen +
+//       '\n\n' +
+//       'Full User Agent: ' +
+//       navigator.userAgent
+//   );
+// }
 
-clientDetection(alertData);
+// clientDetection(alertData);
