@@ -1,3 +1,6 @@
+@use 'sass:color';
+
+
 @mixin make-btn($className, $fg-color, $bg-color) {
   .btn-#{$className} {
     color: $fg-color;
@@ -6,13 +9,13 @@
     transition: color, background-color ease 200ms;
 
     &:hover {
-      background-color: darken($bg-color, 10%);
-      color: darken($fg-color, 10%);
+      background-color: color.scale($bg-color, $lightness: -10%);
+      color: color.scale($fg-color, $lightness: -10%);
     }
 
     &:active {
       box-shadow: none;
-      border: 2px solid darken($bg-color, 18%);
+      border: 2px solid color.scale($bg-color, $lightness: -18%);
     }
   }
 }

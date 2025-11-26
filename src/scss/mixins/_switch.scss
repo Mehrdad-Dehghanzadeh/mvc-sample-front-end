@@ -1,4 +1,6 @@
 @use 'sass:math';
+@use 'sass:color';
+@use '@styles/variables' as *;
 
 @mixin switch-maker($color: $color-primary, $width: 45px) {
   $switch-height: math.ceil($width * 0.45);
@@ -17,7 +19,7 @@
 
     &__input:checked {
       + .switch__track {
-        background-color: lighten($color, 30%);
+        background-color: color.scale($color, $lightness: 30%);
 
         .switch__handle {
           background-color: $color;

@@ -1,26 +1,46 @@
-@import "bootstrap/scss/mixins/banner";
+@use "bootstrap/scss/mixins/banner" as *;
+@use "bootstrap/scss/functions" as *;
+@use "bootstrap/scss/variables" as *;
+@use "bootstrap/scss/maps" as *;
+@use "bootstrap/scss/mixins" as *;
+@use "bootstrap/scss/utilities" as *;
+
+@use "bootstrap/scss/root" as *;
+@use "bootstrap/scss/reboot" as *;
+@use "bootstrap/scss/type" as *;
+@use "bootstrap/scss/images" as *;
+@use "bootstrap/scss/containers" as *;
+@use "bootstrap/scss/grid" as *;
+
+@use "bootstrap/scss/helpers" as *;
+
+@use "bootstrap/scss/utilities/api" as *;
+// scss-docs-end import-stack
 @include bsBanner("");
+
 
 
 // scss-docs-start import-stack
 // Configuration
-@import "bootstrap/scss/functions";
-@import "bootstrap/scss/variables";
-@import "bootstrap/scss/maps";
-@import "bootstrap/scss/mixins";
-@import "bootstrap/scss/utilities";
+@forward "bootstrap/scss/mixins/banner";
+@forward "bootstrap/scss/mixins/banner";
+@forward "bootstrap/scss/functions";
+@forward "bootstrap/scss/variables";
+@forward "bootstrap/scss/maps";
+@forward "bootstrap/scss/mixins";
+@forward "bootstrap/scss/utilities";
 
 // Layout & components
-@import "bootstrap/scss/root";
-@import "bootstrap/scss/reboot";
-@import "bootstrap/scss/type";
-@import "bootstrap/scss/images";
-@import "bootstrap/scss/containers";
-@import "bootstrap/scss/grid";
+@forward "bootstrap/scss/root";
+@forward "bootstrap/scss/reboot";
+@forward "bootstrap/scss/type";
+@forward "bootstrap/scss/images";
+@forward "bootstrap/scss/containers";
+@forward "bootstrap/scss/grid";
 
 // Helpers
-@import "bootstrap/scss/helpers";
+@forward "bootstrap/scss/helpers";
 
 // Utilities
-@import "bootstrap/scss/utilities/api";
+@forward "bootstrap/scss/utilities/api";
 // scss-docs-end import-stack

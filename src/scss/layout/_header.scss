@@ -1,3 +1,5 @@
+@use '@styles/mixins' as *;
+
 .header {
   @include back-ground-dark;
   min-height: 50px;

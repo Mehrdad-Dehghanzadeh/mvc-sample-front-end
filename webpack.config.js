@@ -68,12 +68,13 @@ let config = {
     alias: {
       jquery: 'jquery/src/jquery',
       jqueryValidation: 'jquery-validation/dist/jquery.validate.js',
+      '@styles/*': path.resolve(__dirname, 'src/scss/*'),
     },
   },
 
   entry: {
     browser: 'browser.js',
-    'client-detection': "client-detection.js",
+    'client-detection': 'client-detection.js',
 
     bundle: [
       // style files
@@ -85,7 +86,7 @@ let config = {
       // import scripts
       'modal.js',
       'main.js',
-      'select.js'
+      'select.js',
     ],
   },
 

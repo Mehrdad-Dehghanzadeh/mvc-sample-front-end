@@ -1,3 +1,7 @@
+@use "sass:map";
+@use '@styles/mixins' as *;
+@use '@styles/variables' as *;
+
 $btn-width: (
   xs: 64px,
   sm: 96px,
@@ -27,41 +31,41 @@ $btn-height: (
   font-weight: bold;
   overflow: hidden;
   border-radius: 8px;
-  width: map_get($btn-width, md);
-  height: map_get($btn-height, md);
+  width: map.get($btn-width, md);
+  height: map.get($btn-height, md);
 
   &--xs {
     border-radius: 5px;
     padding: 4px;
-    width: map_get($btn-width, xs);
-    height: map_get($btn-height, xs);
+    width: map.get($btn-width, xs);
+    height: map.get($btn-height, xs);
     font-size: 0.8rem;
   }
 
   &--sm {
     border-radius: 6px;
     padding: 8px;
-    width: map_get($btn-width, sm);
-    height: map_get($btn-height, sm);
+    width: map.get($btn-width, sm);
+    height: map.get($btn-height, sm);
     font-size: 0.8rem;
   }
 
   &--lg {
     border-radius: 10px;
-    width: map_get($btn-width, lg);
-    height: map_get($btn-height, lg);
+    width: map.get($btn-width, lg);
+    height: map.get($btn-height, lg);
   }
 
   &--xl {
     border-radius: 12px;
-    width: map_get($btn-width, xl);
-    height: map_get($btn-height, xl);
+    width: map.get($btn-width, xl);
+    height: map.get($btn-height, xl);
   }
 
   &--wide {
     border-radius: 12px;
-    width: map_get($btn-width, wide);
-    height: map_get($btn-height, wide);
+    width: map.get($btn-width, wide);
+    height: map.get($btn-height, wide);
   }
 
   &--block {

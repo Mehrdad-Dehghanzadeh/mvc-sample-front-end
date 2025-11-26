@@ -1,7 +1,7 @@
-@import 'bootstrap';
-@import 'variables';
-@import 'mixins';
-@import 'base';
-@import 'layout';
-@import 'components';
-@import 'pages';
+//@use 'bootstrap' as *;
+@use 'variables' as *;
+@use 'mixins' as *;
+@use 'base' as *;
+@use 'layout' as *;
+@use 'components' as *;
+@use 'pages' as *;

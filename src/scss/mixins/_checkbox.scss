@@ -1,4 +1,6 @@
 @use 'sass:math';
+@use 'sass:color';
+@use '@styles/variables' as *;
 
 @mixin checkbox-maker(
   $bg-color: $color-primary-light-1,
@@ -22,14 +24,14 @@
       }
 
       &:hover {
-        background-color: lighten($bg-color, 20%);
+        background-color: color.scale($bg-color, $lightness: 20%);
         border: none;
       }
     }
 
     .check-box__input:checked + .check-box__element {
       background-color: $bg-color;
-      box-shadow: 0 0 3px 0 darken($bg-color, 7%);
+      box-shadow: 0 0 3px 0 color.scale($bg-color, $lightness: -7%);
       border: none;
 
       &:after {

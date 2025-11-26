@@ -1,4 +1,4 @@
-@import '../variables/icons';
+@use '@styles/variables/icons' as *;
 
 @font-face {
   font-family: '#{$icon-font-family}';
