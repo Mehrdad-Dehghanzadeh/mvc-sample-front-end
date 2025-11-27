@@ -79,6 +79,8 @@ let config = {
     bundle: [
       // style files
       './scss/main.scss',
+      './scss/tailwind.css',
+      
       // import library js
       'select2',
       'jquery-validation',

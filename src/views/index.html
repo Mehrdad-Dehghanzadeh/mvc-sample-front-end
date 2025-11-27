@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <%= htmlWebpackPlugin.tags.headTags %>
+    <link href="/tailwind.css" rel="stylesheet" />
     <title>base</title>
   </head>
 
@@ -16,10 +17,10 @@
     ></script>
 
     <script
-    type="text/javascript"
-    src="scripts/client-detection.js"
-    defer="defer"
-  ></script>
+      type="text/javascript"
+      src="scripts/client-detection.js"
+      defer="defer"
+    ></script>
     <!-- Check Browsers Support -->
 
     <!-- Layout -->
@@ -70,7 +71,9 @@
     <!-- End Layout -->
 
     <div class="modal">
-      <div class="modal__container"></div>
+      <div class="modal__container">
+        <div class="flex order-1"></div>
+      </div>
     </div>
     <!-- Scripts -->
     <%= htmlWebpackPlugin.tags.bodyTags %>
