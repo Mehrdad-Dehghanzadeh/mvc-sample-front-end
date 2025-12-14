@@ -2,10 +2,9 @@ const autoprefixer = require('autoprefixer');
 const postcssRTLCSS = require('postcss-rtlcss');
 const { Mode, Source, Autorename } = require('postcss-rtlcss/options');
 
-
 module.exports = {
   plugins: [
-    // { '@tailwindcss/postcss': {} },
+    { tailwindcss: {} },
     postcssRTLCSS({
       mode: Mode.override,
       source: Source.rtl,
