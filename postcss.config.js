@@ -5,7 +5,7 @@ const { Mode, Source, Autorename } = require('postcss-rtlcss/options');
 
 module.exports = {
   plugins: [
-    { '@tailwindcss/postcss': {} },
+    // { '@tailwindcss/postcss': {} },
     postcssRTLCSS({
       mode: Mode.override,
       source: Source.rtl,

@@ -80,7 +80,7 @@ let config = {
       // style files
       './scss/main.scss',
       './scss/tailwind.css',
-      
+
       // import library js
       'select2',
       'jquery-validation',
@@ -143,10 +143,10 @@ let config = {
     rules: [
       {
         test: /\.(eot|svg|ttf|woff)$/i,
-        loader: 'file-loader',
-        options: {
-          name: '[name]/[name].[ext]',
-          outputPath: 'fonts',
+        type: 'asset/resource',
+        generator: {
+          filename: 'fonts/[name]/[name][ext]',
+          
         },
       },
       {
@@ -242,7 +242,7 @@ module.exports = (env, { mode }) => {
     config.optimization.minimizer.push(new TerserPlugin());
 
     //config fonts loaders for productions mode
-    config.module.rules[0].options.publicPath = '../fonts';
+    config.module.rules[0].generator.publicPath = '/fonts/';
 
     //config loaders for productions mode
     config.module.rules.push({
