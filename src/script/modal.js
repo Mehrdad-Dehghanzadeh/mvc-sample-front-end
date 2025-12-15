@@ -121,8 +121,7 @@ const { merge } = require('./modules/_helper');
         } else {
           $.error("method '" + options + "' not attached.");
         }
-      } else {
-        if (instance[options]) {
+      } else if (instance[options]) {
           instance[options].apply(instance);
         } else if (typeof options === 'object') {
           instance.settings = $.extend({}, instance.settings, options);
@@ -130,7 +129,6 @@ const { merge } = require('./modules/_helper');
         } else {
           $.error("The method '" + options + "' not exist.");
         }
-      }
     });
   };
 
