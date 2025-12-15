@@ -146,7 +146,6 @@ let config = {
         type: 'asset/resource',
         generator: {
           filename: 'fonts/[name]/[name][ext]',
-          
         },
       },
       {
