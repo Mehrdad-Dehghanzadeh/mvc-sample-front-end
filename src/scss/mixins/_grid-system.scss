@@ -1,0 +1,10 @@
+@use 'sass:math' as *;
+
+@mixin create-cols($grid-columns: 12, $classname: 'col') {
+  @for $i from 1 through $grid-columns {
+    .#{$classname}-#{$i} {
+      flex: 0 0 percentage(div($i, $grid-columns));
+      max-width: percentage(div($i, $grid-columns));
+    }
+  }
+}

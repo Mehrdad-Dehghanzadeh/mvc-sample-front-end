@@ -1,0 +1,27 @@
+@use '@styles/variables' as *;
+@use '@styles/mixins' as *;
+@use '@styles/abstracts' as *;
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: var(--row-margin-x);
+  margin-left: var(--row-margin-x);
+
+  & > [class^='col-'] {
+    @extend %col;
+  }
+}
+
+.col {
+  flex: 1 0 auto;
+}
+
+@include create-cols(12, 'col');
+
+@each $breakpoint, $value in $screen-media-queries {
+  @media #{$value} {
+    $columns-classname: 'col-#{$breakpoint}';
+    @include create-cols(12, $columns-classname);
+  }
+}

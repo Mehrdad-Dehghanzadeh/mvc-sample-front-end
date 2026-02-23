@@ -1,0 +1,29 @@
+:root {
+  --screen-sm: 640px;
+  --screen-md: 768px;
+  --screen-lg: 1024px;
+  --screen-xl: 1280px;
+  --screen-2xl: 1536px;
+}
+
+$screens: (
+  'sm': var(--screen-sm),
+  'md': var(--screen-md),
+  'lg': var(--screen-lg),
+  'xl': var(--screen-xl),
+  '2xl': var(--screen-2xl),
+);
+
+$screen-media-queries: (
+  'sm': 'only screen and (min-width: 640px)',
+  'md': 'only screen and (min-width: 768px)',
+  'lg': 'only screen and (min-width: 1024px)',
+  'xl': 'only screen and (min-width: 1280px)',
+  '2xl': 'only screen and (min-width: 1536px)',
+);
+
+$max-width-2xl: 'only screen and (max-width: 1536px)';
+$max-width-xl: 'only screen and (max-width: 1280px)';
+$max-width-lg: 'only screen and (max-width: 1024px)';
+$max-width-md: 'only screen and (max-width: 768px)';
+$max-width-sm: 'only screen and (max-width: 640px)';
