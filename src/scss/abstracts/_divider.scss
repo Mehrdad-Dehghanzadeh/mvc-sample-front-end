@@ -1,0 +1,14 @@
+%divider {
+  width: 100%;
+  height: 0;
+  margin: 8px auto;
+  border: none;
+}
+
+%divider-vertical {
+  height: 100%;
+  width: 0;
+  margin: auto 8px;
+  border: none;
+  display: inline-block;
+}

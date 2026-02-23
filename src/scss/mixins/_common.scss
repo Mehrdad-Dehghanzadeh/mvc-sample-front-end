@@ -5,13 +5,13 @@
 *****************************/
 
 @mixin back-ground-dark {
-  background-color: $color-black;
-  color: $color-white;
+  background-color: var(--color-black);
+  color: var(--color-white);
 }
 
 @mixin back-ground-white {
-  color: $color-black;
-  background-color: $color-white;
+  background-color: var(--color-white);
+  color: var(--color-black);
 }
 
 /**
@@ -34,4 +34,42 @@
   right: 0;
   bottom: 0;
   left: 0;
+}
+
+@mixin full() {
+  width: 100%;
+  height: 100%;
+}
+
+@mixin create-circle($size) {
+  border-radius: 50%;
+  width: $size;
+  height: $size;
+}
+
+@mixin create-square($size) {
+  width: $size;
+  height: $size;
+}
+
+@mixin create-gradient-border(
+  $border-gradient,
+  $bg-gradient: var(--white-gr),
+  $border-width: 1px
+) {
+  background:
+    $bg-gradient padding-box,
+    $border-gradient border-box;
+  border: $border-width solid transparent;
+}
+
+@mixin text-ellipsis() {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin pointer-none() {
+  cursor: pointer;
+  user-select: none;
 }

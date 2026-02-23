@@ -1,0 +1,41 @@
+@use '@styles/mixins' as *;
+
+@keyframes goLeft {
+  0% {
+    width: 0;
+    right: 0;
+  }
+
+  50% {
+    width: 30%;
+  }
+
+  100% {
+    right: 100%;
+  }
+}
+
+%skelton-loading {
+  background-color: #f3f3f3;
+  overflow: hidden;
+  position: relative;
+  display: block;
+  @include full();
+
+  &:after {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 25px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgb(236 236 236);
+    animation-name: goLeft;
+    animation-duration: 1.4s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: ease;
+    z-index: 1;
+  }
+}
